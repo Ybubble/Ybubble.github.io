@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2022/2 | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="数据表示–&gt;数据清洗–&gt;数据统计–&gt;数据可视化–&gt;数据挖掘–&gt;人工智能 数据表示：采用合适方式用程序表达数据 数据清理：数据归一化、数据转换、异常值处理 数据统计：数据的概要理解，数量、分布、中位数等 数据可视化：直观展示数据内涵的方式 数据挖掘：从数据分析获得知识，产生数据外的价值 人工只能：数据&#x2F;语言&#x2F;图像&#x2F;视觉等方面深度分析与决策 python库之数据分析Num">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2022/02/index.html">
+<meta property="og:url" content="http://example.com/2022/02/16/%E5%9F%BA%E7%A1%80/python%E5%BA%93%E7%AE%80%E4%BB%8B/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="数据表示–&gt;数据清洗–&gt;数据统计–&gt;数据可视化–&gt;数据挖掘–&gt;人工智能 数据表示：采用合适方式用程序表达数据 数据清理：数据归一化、数据转换、异常值处理 数据统计：数据的概要理解，数量、分布、中位数等 数据可视化：直观展示数据内涵的方式 数据挖掘：从数据分析获得知识，产生数据外的价值 人工只能：数据&#x2F;语言&#x2F;图像&#x2F;视觉等方面深度分析与决策 python库之数据分析Num">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-15T16:00:36.162Z">
+<meta property="article:modified_time" content="2021-12-29T12:22:37.448Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -153,127 +157,286 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-基础/python库简介" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>数据表示–&gt;数据清洗–&gt;数据统计–&gt;数据可视化–&gt;数据挖掘–&gt;人工智能</p>
+<p>数据表示：采用合适方式用程序表达数据</p>
+<p>数据清理：数据归一化、数据转换、异常值处理</p>
+<p>数据统计：数据的概要理解，数量、分布、中位数等</p>
+<p>数据可视化：直观展示数据内涵的方式</p>
+<p>数据挖掘：从数据分析获得知识，产生数据外的价值</p>
+<p>人工只能：数据/语言/图像/视觉等方面深度分析与决策</p>
+<h3 id="python库之数据分析"><a href="#python库之数据分析" class="headerlink" title="python库之数据分析"></a>python库之数据分析</h3><h5 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h5><ul>
+<li>表达<strong>N维数组</strong>的最基础库</li>
+<li>Python接口使用，C语言实现，计算速度优异</li>
+<li>Python数据分析及科学计算的基础库，支撑Pandas等</li>
+<li>提供直接的矩阵运算、广播函数、线性代数等功能</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pySum</span>():</span></span><br><span class="line">	a = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">	b = [<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>,<span class="number">6</span>,<span class="number">5</span>]</span><br><span class="line">	c = []</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(a))</span><br><span class="line">		c.append(a[i]**<span class="number">2</span> + b[i]**<span class="number">3</span>)</span><br><span class="line">		</span><br><span class="line">	<span class="keyword">return</span> c</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(pySum())</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">npSum</span>():</span></span><br><span class="line">	a = np.array([<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">	b = np.array([<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>,<span class="number">6</span>,<span class="number">5</span>])</span><br><span class="line">	</span><br><span class="line">	c = a**<span class="number">2</span> + b**<span class="number">3</span></span><br><span class="line">	<span class="keyword">return</span> c</span><br><span class="line">	</span><br><span class="line"><span class="built_in">print</span>(npSum())</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h5><ul>
+<li>Python<strong>数据分析</strong>高层次应用库</li>
+<li>提供了简单易用的数据结构和数据分析工具</li>
+<li>理解数据类型与索引的关系，操作索引即操作数据</li>
+<li>Python最主要的数据分析功能库，基于Numpy开发</li>
+</ul>
+<h5 id="SciPy"><a href="#SciPy" class="headerlink" title="SciPy"></a>SciPy</h5><ul>
+<li>数学、科学和工程计算功能库</li>
+<li>提供了一批<strong>数学算法</strong>及<strong>工程数据运算</strong>功能</li>
+<li>类似Matlab，可用于如傅里叶变换、信号处理等应用</li>
+<li>Python最主要的科学计算功能库，基于Numpy开发</li>
+<li>类：<ul>
+<li>傅里叶变换类</li>
+<li>信号处理类</li>
+<li>线性代数类</li>
+<li>图像处理类</li>
+<li>优化算法类</li>
+<li>稀疏运算类</li>
+<li>稀疏图压缩类</li>
+</ul>
+</li>
+</ul>
+<h3 id="Python库之数据可视化"><a href="#Python库之数据可视化" class="headerlink" title="Python库之数据可视化"></a>Python库之数据可视化</h3><h5 id="Matplotlib"><a href="#Matplotlib" class="headerlink" title="Matplotlib"></a>Matplotlib</h5><ul>
+<li>高质量的<strong>二维数据可视化</strong>功能库</li>
+<li>提供了超过100种数据可视化展示效果</li>
+<li>通过matplotlib.pyplot子库调用各可视化效果</li>
+<li>Python最主要的数据可视化功能库，基于Numpy开发</li>
+</ul>
+<h5 id="Seaborn"><a href="#Seaborn" class="headerlink" title="Seaborn"></a>Seaborn</h5><ul>
+<li><strong>统计类数据可视化</strong>功能库</li>
+<li>主要展示数据间分布、分类和线性关系等内容</li>
+<li>基于Matplotlib开发，支持Numpy和Pandas</li>
+</ul>
+<h5 id="Mayavi"><a href="#Mayavi" class="headerlink" title="Mayavi"></a>Mayavi</h5><ul>
+<li><strong>三维科学数据可视化</strong>功能库</li>
+<li>目前版本是Mayavi2，三维可视化最主要的第三方库</li>
+<li>支持Numpy、TVTK、Traits、Envisage等第三方库</li>
+</ul>
+<h3 id="Python库之文本处理"><a href="#Python库之文本处理" class="headerlink" title="Python库之文本处理"></a>Python库之文本处理</h3><h5 id="PyPDF2"><a href="#PyPDF2" class="headerlink" title="PyPDF2"></a>PyPDF2</h5><ul>
+<li>用来处理<strong>pdf文件</strong>的工具集</li>
+<li>提供了一批处理PDF文件的计算功能</li>
+<li>完全Python语言实现，不需要额外依赖，功能稳定</li>
+</ul>
+<h5 id="NLTK"><a href="#NLTK" class="headerlink" title="NLTK"></a>NLTK</h5><ul>
+<li><strong>自然语言文本处理</strong>第三方库</li>
+<li>支持文本分类、标记、语法句法、语义分析等</li>
+<li>最优秀的Python自然语言处理库</li>
+</ul>
+<h5 id="Python-docx"><a href="#Python-docx" class="headerlink" title="Python-docx"></a>Python-docx</h5><ul>
+<li><strong>创建或更新Microsoft Word文件</strong>的第三方库</li>
+<li>增加并配置段落、图片、表格、文字等，功能全面</li>
+</ul>
+<h3 id="Python之机器学习"><a href="#Python之机器学习" class="headerlink" title="Python之机器学习"></a>Python之机器学习</h3><h5 id="Sclikit-learn"><a href="#Sclikit-learn" class="headerlink" title="Sclikit-learn"></a>Sclikit-learn</h5><ul>
+<li><strong>机器学习方法工具集</strong></li>
+<li>提供一批统一化的机器学习方法功能接口</li>
+<li>提供聚类、分类、回归、强化学习等计算功能</li>
+<li>机器学习最基本且最优秀的Python第三方库</li>
+</ul>
+<h5 id="TensorFlow"><a href="#TensorFlow" class="headerlink" title="TensorFlow"></a>TensorFlow</h5><ul>
+<li>AlphaGo背后的<strong>机器学习框架</strong></li>
+<li>谷歌公司推动的开源机器学习框架</li>
+<li>将数据流图作为基础，图节点代表运算，边代表张量</li>
+<li>应用机器学习的一种方式，支持谷歌人工智能应用</li>
+</ul>
+<h5 id="MXNet"><a href="#MXNet" class="headerlink" title="MXNet"></a>MXNet</h5><ul>
+<li><strong>基于神经网络的深度学习计算框架</strong></li>
+<li>提供可扩展的神经网络及深度学习计算功能</li>
+<li>用于自动驾驶、机器翻译、语音识别等众多领域</li>
+<li>Python最重要的深度学习计算框架</li>
+</ul>
+<h3 id="Python库之网络爬虫"><a href="#Python库之网络爬虫" class="headerlink" title="Python库之网络爬虫"></a>Python库之网络爬虫</h3><h5 id="Requests"><a href="#Requests" class="headerlink" title="Requests"></a>Requests</h5><ul>
+<li>最友好的<strong>网络爬虫功能库</strong></li>
+<li>提供了简单易用的类HTTP协议网络爬虫功能</li>
+<li>支持连接池、SSL、Cookies、HTTP(S)代理等</li>
+<li>Python最主要的页面级网络爬虫功能库</li>
+</ul>
+<h5 id="Scrapy"><a href="#Scrapy" class="headerlink" title="Scrapy"></a>Scrapy</h5><ul>
+<li>优秀的<strong>网络爬虫框架</strong></li>
+<li>提供了构建网络爬虫系统的框架功能，功能半成品</li>
+<li>支持批量和定时网页爬取、提供数据处理流程等</li>
+<li>Python最主要且最专业的网络爬虫框架</li>
+</ul>
+<h5 id="pyspider"><a href="#pyspider" class="headerlink" title="pyspider"></a>pyspider</h5><ul>
+<li>强大的<strong>Web页面爬取系统</strong></li>
+<li>提供了完整的网页爬取系统构建功能</li>
+<li>支持数据库后端、消息列表、优先级、分布式架构等</li>
+</ul>
+<h3 id="Python库之Web信息提取"><a href="#Python库之Web信息提取" class="headerlink" title="Python库之Web信息提取"></a>Python库之Web信息提取</h3><h5 id="Beautiful-Soup"><a href="#Beautiful-Soup" class="headerlink" title="Beautiful Soup"></a>Beautiful Soup</h5><ul>
+<li><strong>HTML和XML的解析库</strong></li>
+<li>又名beautifulsoup4或bs4，可以加载多种解析引擎</li>
+<li>常与网络爬虫库搭配使用，如Scrapy、reques等</li>
+</ul>
+<h5 id="Re"><a href="#Re" class="headerlink" title="Re"></a>Re</h5><ul>
+<li><strong>正则表达式解析和处理</strong>功能库</li>
+<li>可用于各类场景，包括定点的Web信息提取</li>
+</ul>
+<h5 id="Python-Goose"><a href="#Python-Goose" class="headerlink" title="Python-Goose"></a>Python-Goose</h5><ul>
+<li><strong>提取文章类型Web页面</strong>的功能库</li>
+<li>提供了对Web页面中文章信息、视频等元数据的提取功能</li>
+<li>针对特定类型Web页面，应用覆盖面较广</li>
+</ul>
+<h3 id="Python库之Web网站开发"><a href="#Python库之Web网站开发" class="headerlink" title="Python库之Web网站开发"></a>Python库之Web网站开发</h3><h5 id="Django-gt-Pyramid-gt-Flask"><a href="#Django-gt-Pyramid-gt-Flask" class="headerlink" title="Django &gt; Pyramid &gt; Flask"></a>Django &gt; Pyramid &gt; Flask</h5><h5 id="Django"><a href="#Django" class="headerlink" title="Django"></a>Django</h5><ul>
+<li>最流行的<strong>Web应用框架</strong></li>
+<li>提供了构建Web系统的基本应用框架</li>
+<li>MTV模式：模型（model）、模板（template）、视图（views）</li>
+</ul>
+<h5 id="Pyramid"><a href="#Pyramid" class="headerlink" title="Pyramid"></a>Pyramid</h5><ul>
+<li>规模适中的<strong>Web应用框架</strong></li>
+<li>提供了简单方便构建Web系统的应用框架</li>
+<li>适合快速构建并适度扩展类应用</li>
+<li>Python产品级Web应用框架，起步简单可扩展性好</li>
+</ul>
+<h5 id="Flask"><a href="#Flask" class="headerlink" title="Flask"></a>Flask</h5><ul>
+<li><strong>Web应用</strong>开发微框架</li>
+<li>简单、规模小、快速</li>
+</ul>
+<h3 id="Python库之网络应用开发"><a href="#Python库之网络应用开发" class="headerlink" title="Python库之网络应用开发"></a>Python库之网络应用开发</h3><h5 id="WeRoBot"><a href="#WeRoBot" class="headerlink" title="WeRoBot"></a>WeRoBot</h5><ul>
+<li><strong>微信公众号开发</strong>框架</li>
+<li>提供了解析微信服务器消息及反馈消息的功能</li>
+<li>建立微信机器人的重要技术手段</li>
+</ul>
+<h5 id="aip"><a href="#aip" class="headerlink" title="aip"></a>aip</h5><ul>
+<li><strong>百度AI开放平台接口</strong></li>
+<li>语音、人脸、OCR、NLP、知识图谱、图像搜索等领域</li>
+</ul>
+<h5 id="MyQR"><a href="#MyQR" class="headerlink" title="MyQR"></a>MyQR</h5><ul>
+<li><strong>二维码生成</strong>第三方库</li>
+<li>基本二维码、艺术二维码、动态二维码</li>
+</ul>
+<h3 id="Python库之图形用户界面"><a href="#Python库之图形用户界面" class="headerlink" title="Python库之图形用户界面"></a>Python库之图形用户界面</h3><h5 id="PyQt5"><a href="#PyQt5" class="headerlink" title="PyQt5"></a>PyQt5</h5><ul>
+<li>Qt开发框架的Python接口</li>
+<li>Qt是非常成熟的跨平台桌面应用开发系统，完备GUI</li>
+</ul>
+<h5 id="wxPython"><a href="#wxPython" class="headerlink" title="wxPython"></a>wxPython</h5><ul>
+<li>跨平台GUI开发框架</li>
+</ul>
+<h5 id="PyGObject"><a href="#PyGObject" class="headerlink" title="PyGObject"></a>PyGObject</h5><ul>
+<li>使用GTK+开发GUI的功能库</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/02/16/%E5%9F%BA%E7%A1%80/python%E5%AE%9E%E4%BE%8B/" class="archive-article-date">
-  	<time datetime="2022-02-15T16:00:36.172Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-16</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/02/16/%E5%9F%BA%E7%A1%80/python%E5%BA%93%E7%AE%80%E4%BB%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/02/16/%E5%9F%BA%E7%A1%80/python%E5%BA%93%E7%AE%80%E4%BB%8B/" class="archive-article-date">
-  	<time datetime="2022-02-15T16:00:36.162Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-16</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/02/16/%E5%9F%BA%E7%A1%80/python%E5%9F%BA%E7%A1%80/" class="archive-article-date">
-  	<time datetime="2022-02-15T16:00:36.153Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-16</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2022/02/16/%E5%9F%BA%E7%A1%80/python%E5%AE%9E%E4%BE%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/02/16/%E5%9F%BA%E7%A1%80/python%E5%9F%BA%E7%A1%80/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/02/16/%E5%9F%BA%E7%A1%80/python%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2022-02-15T16:00:36.136Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-16</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/02/15/%E6%96%87%E4%BB%B6/" class="archive-article-date">
-  	<time datetime="2022-02-15T15:43:14.550Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-15</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -296,8 +459,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
