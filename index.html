@@ -60,7 +60,7 @@
 			</ul>
 		</nav>
 		<nav>
-   			 总文章数 2
+   			 总文章数 3
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -154,6 +154,132 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-文件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="文件的类型"><a href="#文件的类型" class="headerlink" title="文件的类型"></a>文件的类型</h3><h6 id="文件的定义："><a href="#文件的定义：" class="headerlink" title="文件的定义："></a>文件的定义：</h6><ul>
+<li><p>文件是数据的抽象和集合</p>
+</li>
+<li><p>文件是存储在<strong>辅助存储器</strong>上的<strong>数据序列</strong></p>
+</li>
+<li><p>文件是数据存储的一种形式</p>
+</li>
+<li><p>文件展现形态：<strong>文本文件</strong>、<strong>二进制文件</strong>（本质上都是二进制形式存储）</p>
+<ul>
+<li><p>文本文件</p>
+<p>由单一特定编码组成的文件（如UTF-8编码）</p>
+<p>由于存在编码，也被看成是存储着的长字符串</p>
+<p>.txt、.py</p>
+</li>
+<li><p>二进制文件</p>
+<p>直接由比特0和1组成，没有统一字符编码</p>
+<p>一般存在二进制0和1的组织结构，即文件格式</p>
+<p>.png、.avi</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="文件的打开和关闭"><a href="#文件的打开和关闭" class="headerlink" title="文件的打开和关闭"></a>文件的打开和关闭</h3><h6 id="文件的打开"><a href="#文件的打开" class="headerlink" title="文件的打开"></a>文件的打开</h6><ul>
+<li><p>格式：&lt;变量名&gt; = open( &lt;文件路径&gt; , &lt;打开模式&gt;)</p>
+<p>:small_blue_diamond:与源文件同目录可以省略路径</p>
+<p>:small_blue_diamond:C:/…/…/xxx.txt、C: \ \ … \ \ … \ \ xxx.txt（python中 ‘ \ ‘表示转义符）</p>
+</li>
+<li><p>打开</p>
+<p>:one: r：只读，默认值，如果文件不存在，返回FileNotFoundError</p>
+<p>:two: w：覆盖写，文件不存在则创建，存在则完全覆盖</p>
+<p>:three: x：创建写，文件不存在则创建，存在则返回FileExitsError</p>
+<p>:four: a：追加写，文件不存在则创建，存在则在文件最后追加内容</p>
+<p>:five: b：二进制文件模式</p>
+<p>:six: t：文本文件模式，默认值</p>
+<p>:seven: +：与r/w/x/a一起使用，在原功能基础上增加同时读写功能</p>
+<p>例：rt：只读、a+：追加写+读文件、wb：二进制+覆盖写</p>
+</li>
+<li><p>关闭</p>
+<p>&lt;变量名&gt;.close( )</p>
+</li>
+</ul>
+<h3 id="文件内容的读取"><a href="#文件内容的读取" class="headerlink" title="文件内容的读取"></a>文件内容的读取</h3><ul>
+<li>常用操作：</li>
+</ul>
+<p>:one: <filename>.read(size=-1)：读入<strong>全部</strong>内容，如果给出参数，读入长度为size</p>
+<p>:two: <filename>.readline(size=-1)：读入<strong>一行</strong>内容，如果给出参数，读入长度为size</p>
+<p>:three: <filename>.readlines(hint=-1)：读入<strong>所有行</strong>内容，以<strong>每行</strong>为一个元素形成<strong>列表</strong>，如果给出参数，读入行数为hint</p>
+<ul>
+<li><p>遍历方法</p>
+<ul>
+<li>一次读入，统一处理</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(filename,<span class="string">&quot;r&quot;</span>)</span><br><span class="line">txt = file.read()</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>（处理大文件）按数量读入，逐步处理</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(filename,<span class="string">&quot;r&quot;</span>)</span><br><span class="line">txt = file.read(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> txt != <span class="string">&quot; &quot;</span>:</span><br><span class="line">	txt = file.read(<span class="number">2</span>)</span><br><span class="line">	</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure></li>
+<li><p>文件的逐行操作</p>
+<ul>
+<li>逐行遍历(占内存)</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(filename,<span class="string">&quot;r&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> file.readlines():</span><br><span class="line">	<span class="built_in">print</span>(line)</span><br><span class="line">	</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>分行读入，逐行处理</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(filename.<span class="string">&quot;r&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> file:</span><br><span class="line">	<span class="built_in">print</span>(line)</span><br><span class="line">	</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="数据的文件写入"><a href="#数据的文件写入" class="headerlink" title="数据的文件写入"></a>数据的文件写入</h3><p>:one: <filename>.write(s)：向文件写入一个字符串或字节流</p>
+<p>:two: <filename>.writelines(s)：将一个元素全为字符串的<strong>列表</strong>写入文件</p>
+<p>:three: <filename>.seek(offset)：改变当前文件操作指针的位置</p>
+<p>​      :small_blue_diamond:offset参数：0—&gt;文件开头；1—&gt;当前位置；2—&gt;文件结尾</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&quot;xxx.txt&quot;</span>.<span class="string">&quot;w+&quot;</span>)</span><br><span class="line">ls = [<span class="string">&quot;a&quot;</span>,<span class="string">&quot;b&quot;</span>,<span class="string">&quot;c&quot;</span>]</span><br><span class="line"></span><br><span class="line">file.writelines(ls)</span><br><span class="line"></span><br><span class="line">file.seek(<span class="number">0</span>)   <span class="comment"># 若无指针移动，则在写入后指针位于文件最后，打印为空</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> file:</span><br><span class="line">	<span class="built_in">print</span>(line)</span><br><span class="line">	</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/02/15/%E6%96%87%E4%BB%B6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-集合" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
