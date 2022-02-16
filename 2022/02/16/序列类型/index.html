@@ -6,11 +6,15 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+  <meta name="description" content="序列类型 序列是具有先后关系的一组元素 序列是一维向量，元素类型可以不同 可以通过下标访问序列的特定元素 序列是一个基类类型  序列类型通用操作符 x in s  x not in s  s + t     –&gt;连接连个序列  s*n      –&gt;复制n次  n*s      –&gt;复制n次  s[ i ]     –&gt;索引  s[ i : j ]、s[ i : j : k">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2022/02/16/%E5%BA%8F%E5%88%97%E7%B1%BB%E5%9E%8B/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="序列类型 序列是具有先后关系的一组元素 序列是一维向量，元素类型可以不同 可以通过下标访问序列的特定元素 序列是一个基类类型  序列类型通用操作符 x in s  x not in s  s + t     –&gt;连接连个序列  s*n      –&gt;复制n次  n*s      –&gt;复制n次  s[ i ]     –&gt;索引  s[ i : j ]、s[ i : j : k">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-16T06:45:40.827Z">
+<meta property="article:modified_time" content="2021-11-16T11:53:52.141Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -69,9 +73,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-序列类型" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-序列类型" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/02/16/%E5%BA%8F%E5%88%97%E7%B1%BB%E5%9E%8B/" class="article-date">
   <time class="dt-published" datetime="2022-02-16T06:45:40.827Z" itemprop="datePublished">2022-02-16</time>
@@ -219,158 +221,19 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-文件" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/02/15/%E6%96%87%E4%BB%B6/" class="article-date">
-  <time class="dt-published" datetime="2022-02-15T15:43:14.550Z" itemprop="datePublished">2022-02-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h1><h3 id="文件的类型"><a href="#文件的类型" class="headerlink" title="文件的类型"></a>文件的类型</h3><h6 id="文件的定义："><a href="#文件的定义：" class="headerlink" title="文件的定义："></a>文件的定义：</h6><ul>
-<li><p>文件是数据的抽象和集合</p>
-</li>
-<li><p>文件是存储在<strong>辅助存储器</strong>上的<strong>数据序列</strong></p>
-</li>
-<li><p>文件是数据存储的一种形式</p>
-</li>
-<li><p>文件展现形态：<strong>文本文件</strong>、<strong>二进制文件</strong>（本质上都是二进制形式存储）</p>
-<ul>
-<li><p>文本文件</p>
-<p>由单一特定编码组成的文件（如UTF-8编码）</p>
-<p>由于存在编码，也被看成是存储着的长字符串</p>
-<p>.txt、.py</p>
-</li>
-<li><p>二进制文件</p>
-<p>直接由比特0和1组成，没有统一字符编码</p>
-<p>一般存在二进制0和1的组织结构，即文件格式</p>
-<p>.png、.avi</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="文件的打开和关闭"><a href="#文件的打开和关闭" class="headerlink" title="文件的打开和关闭"></a>文件的打开和关闭</h3><h6 id="文件的打开"><a href="#文件的打开" class="headerlink" title="文件的打开"></a>文件的打开</h6><ul>
-<li><p>格式：&lt;变量名&gt; = open( &lt;文件路径&gt; , &lt;打开模式&gt;)</p>
-<p>:small_blue_diamond:与源文件同目录可以省略路径</p>
-<p>:small_blue_diamond:C:/…/…/xxx.txt、C: \ \ … \ \ … \ \ xxx.txt（python中 ‘ \ ‘表示转义符）</p>
-</li>
-<li><p>打开</p>
-<p>:one: r：只读，默认值，如果文件不存在，返回FileNotFoundError</p>
-<p>:two: w：覆盖写，文件不存在则创建，存在则完全覆盖</p>
-<p>:three: x：创建写，文件不存在则创建，存在则返回FileExitsError</p>
-<p>:four: a：追加写，文件不存在则创建，存在则在文件最后追加内容</p>
-<p>:five: b：二进制文件模式</p>
-<p>:six: t：文本文件模式，默认值</p>
-<p>:seven: +：与r/w/x/a一起使用，在原功能基础上增加同时读写功能</p>
-<p>例：rt：只读、a+：追加写+读文件、wb：二进制+覆盖写</p>
-</li>
-<li><p>关闭</p>
-<p>&lt;变量名&gt;.close( )</p>
-</li>
-</ul>
-<h3 id="文件内容的读取"><a href="#文件内容的读取" class="headerlink" title="文件内容的读取"></a>文件内容的读取</h3><ul>
-<li>常用操作：</li>
-</ul>
-<p>:one: <filename>.read(size=-1)：读入<strong>全部</strong>内容，如果给出参数，读入长度为size</p>
-<p>:two: <filename>.readline(size=-1)：读入<strong>一行</strong>内容，如果给出参数，读入长度为size</p>
-<p>:three: <filename>.readlines(hint=-1)：读入<strong>所有行</strong>内容，以<strong>每行</strong>为一个元素形成<strong>列表</strong>，如果给出参数，读入行数为hint</p>
-<ul>
-<li><p>遍历方法</p>
-<ul>
-<li>一次读入，统一处理</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(filename,<span class="string">&quot;r&quot;</span>)</span><br><span class="line">txt = file.read()</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
+  
+    <a href="/2022/02/15/%E6%96%87%E4%BB%B6/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
 
-<ul>
-<li>（处理大文件）按数量读入，逐步处理</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(filename,<span class="string">&quot;r&quot;</span>)</span><br><span class="line">txt = file.read(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> txt != <span class="string">&quot; &quot;</span>:</span><br><span class="line">	txt = file.read(<span class="number">2</span>)</span><br><span class="line">	</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure></li>
-<li><p>文件的逐行操作</p>
-<ul>
-<li>逐行遍历(占内存)</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(filename,<span class="string">&quot;r&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> file.readlines():</span><br><span class="line">	<span class="built_in">print</span>(line)</span><br><span class="line">	</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>分行读入，逐行处理</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(filename.<span class="string">&quot;r&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> file:</span><br><span class="line">	<span class="built_in">print</span>(line)</span><br><span class="line">	</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="数据的文件写入"><a href="#数据的文件写入" class="headerlink" title="数据的文件写入"></a>数据的文件写入</h3><p>:one: <filename>.write(s)：向文件写入一个字符串或字节流</p>
-<p>:two: <filename>.writelines(s)：将一个元素全为字符串的<strong>列表</strong>写入文件</p>
-<p>:three: <filename>.seek(offset)：改变当前文件操作指针的位置</p>
-<p>​      :small_blue_diamond:offset参数：0—&gt;文件开头；1—&gt;当前位置；2—&gt;文件结尾</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&quot;xxx.txt&quot;</span>.<span class="string">&quot;w+&quot;</span>)</span><br><span class="line">ls = [<span class="string">&quot;a&quot;</span>,<span class="string">&quot;b&quot;</span>,<span class="string">&quot;c&quot;</span>]</span><br><span class="line"></span><br><span class="line">file.writelines(ls)</span><br><span class="line"></span><br><span class="line">file.seek(<span class="number">0</span>)   <span class="comment"># 若无指针移动，则在写入后指针位于文件最后，打印为空</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> file:</span><br><span class="line">	<span class="built_in">print</span>(line)</span><br><span class="line">	</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/15/%E6%96%87%E4%BB%B6/" data-id="ckzp6y9cf00029ovh7ki2f0bz" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-集合" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/01/23/%E9%9B%86%E5%90%88/" class="article-date">
-  <time class="dt-published" datetime="2022-01-23T11:57:21.826Z" itemprop="datePublished">2022-01-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><h3 id="集合类型的定义"><a href="#集合类型的定义" class="headerlink" title="集合类型的定义"></a>集合类型的定义</h3><ul>
-<li><p>集合是多个元素的无序组合</p>
-</li>
-<li><p>集合元素之间<strong>无序</strong>，每个元素<strong>唯一</strong>，不存在相同元素，<strong>没有下标</strong></p>
-</li>
-<li><p>集合元素不可更改，是<strong>不可变</strong>数据类型</p>
-</li>
-<li><p>集合用{}表示，元素间用逗号分隔</p>
-        
-          <p class="article-more-link">
-            <a href="/2022/01/23/%E9%9B%86%E5%90%88/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/23/%E9%9B%86%E5%90%88/" data-id="ckzp6y9cd00019ovhhj9hf83p" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>
