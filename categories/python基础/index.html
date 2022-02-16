@@ -6,17 +6,13 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hexo</title>
+  <title>Category: python基础 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="文件文件的类型文件的定义： 文件是数据的抽象和集合  文件是存储在辅助存储器上的数据序列  文件是数据存储的一种形式  文件展现形态：文本文件、二进制文件（本质上都是二进制形式存储）  文本文件 由单一特定编码组成的文件（如UTF-8编码） 由于存在编码，也被看成是存储着的长字符串 .txt、.py  二进制文件 直接由比特0和1组成，没有统一字符编码 一般存在二进制0和1的组织结构，即文件格式">
-<meta property="og:type" content="article">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/2022/02/15/%E6%96%87%E4%BB%B6/index.html">
+<meta property="og:url" content="http://example.com/categories/python%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="文件文件的类型文件的定义： 文件是数据的抽象和集合  文件是存储在辅助存储器上的数据序列  文件是数据存储的一种形式  文件展现形态：文本文件、二进制文件（本质上都是二进制形式存储）  文本文件 由单一特定编码组成的文件（如UTF-8编码） 由于存在编码，也被看成是存储着的长字符串 .txt、.py  二进制文件 直接由比特0和1组成，没有统一字符编码 一般存在二进制0和1的组织结构，即文件格式">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-02-15T15:43:14.550Z">
-<meta property="article:modified_time" content="2022-02-15T15:59:30.354Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -47,7 +43,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/img/head.jpg" class="js-avatar">
+			<img src="" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/"></a></h1>
@@ -59,7 +55,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+				<li><a href="/categories">分类</a></li>
 	        
 			</ul>
 		</nav>
@@ -105,7 +101,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/img/head.jpg" class="js-avatar">
+				<img src="" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author"></h1>
@@ -139,7 +135,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 50%"><a href="/categories">分类</a></li>
 		        
 				</ul>
 			</nav>
@@ -154,228 +150,136 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-文件" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-    <div class="article-entry" itemprop="articleBody">
+    
       
-        <h1 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h1><h3 id="文件的类型"><a href="#文件的类型" class="headerlink" title="文件的类型"></a>文件的类型</h3><h6 id="文件的定义："><a href="#文件的定义：" class="headerlink" title="文件的定义："></a>文件的定义：</h6><ul>
-<li><p>文件是数据的抽象和集合</p>
-</li>
-<li><p>文件是存储在<strong>辅助存储器</strong>上的<strong>数据序列</strong></p>
-</li>
-<li><p>文件是数据存储的一种形式</p>
-</li>
-<li><p>文件展现形态：<strong>文本文件</strong>、<strong>二进制文件</strong>（本质上都是二进制形式存储）</p>
-<ul>
-<li><p>文本文件</p>
-<p>由单一特定编码组成的文件（如UTF-8编码）</p>
-<p>由于存在编码，也被看成是存储着的长字符串</p>
-<p>.txt、.py</p>
-</li>
-<li><p>二进制文件</p>
-<p>直接由比特0和1组成，没有统一字符编码</p>
-<p>一般存在二进制0和1的组织结构，即文件格式</p>
-<p>.png、.avi</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="文件的打开和关闭"><a href="#文件的打开和关闭" class="headerlink" title="文件的打开和关闭"></a>文件的打开和关闭</h3><h6 id="文件的打开"><a href="#文件的打开" class="headerlink" title="文件的打开"></a>文件的打开</h6><ul>
-<li><p>格式：&lt;变量名&gt; = open( &lt;文件路径&gt; , &lt;打开模式&gt;)</p>
-<p>:small_blue_diamond:与源文件同目录可以省略路径</p>
-<p>:small_blue_diamond:C:/…/…/xxx.txt、C: \ \ … \ \ … \ \ xxx.txt（python中 ‘ \ ‘表示转义符）</p>
-</li>
-<li><p>打开</p>
-<p>:one: r：只读，默认值，如果文件不存在，返回FileNotFoundError</p>
-<p>:two: w：覆盖写，文件不存在则创建，存在则完全覆盖</p>
-<p>:three: x：创建写，文件不存在则创建，存在则返回FileExitsError</p>
-<p>:four: a：追加写，文件不存在则创建，存在则在文件最后追加内容</p>
-<p>:five: b：二进制文件模式</p>
-<p>:six: t：文本文件模式，默认值</p>
-<p>:seven: +：与r/w/x/a一起使用，在原功能基础上增加同时读写功能</p>
-<p>例：rt：只读、a+：追加写+读文件、wb：二进制+覆盖写</p>
-</li>
-<li><p>关闭</p>
-<p>&lt;变量名&gt;.close( )</p>
-</li>
-</ul>
-<h3 id="文件内容的读取"><a href="#文件内容的读取" class="headerlink" title="文件内容的读取"></a>文件内容的读取</h3><ul>
-<li>常用操作：</li>
-</ul>
-<p>:one: <filename>.read(size=-1)：读入<strong>全部</strong>内容，如果给出参数，读入长度为size</p>
-<p>:two: <filename>.readline(size=-1)：读入<strong>一行</strong>内容，如果给出参数，读入长度为size</p>
-<p>:three: <filename>.readlines(hint=-1)：读入<strong>所有行</strong>内容，以<strong>每行</strong>为一个元素形成<strong>列表</strong>，如果给出参数，读入行数为hint</p>
-<ul>
-<li><p>遍历方法</p>
-<ul>
-<li>一次读入，统一处理</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(filename,<span class="string">&quot;r&quot;</span>)</span><br><span class="line">txt = file.read()</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>（处理大文件）按数量读入，逐步处理</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(filename,<span class="string">&quot;r&quot;</span>)</span><br><span class="line">txt = file.read(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> txt != <span class="string">&quot; &quot;</span>:</span><br><span class="line">	txt = file.read(<span class="number">2</span>)</span><br><span class="line">	</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure></li>
-<li><p>文件的逐行操作</p>
-<ul>
-<li>逐行遍历(占内存)</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(filename,<span class="string">&quot;r&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> file.readlines():</span><br><span class="line">	<span class="built_in">print</span>(line)</span><br><span class="line">	</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>分行读入，逐行处理</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(filename.<span class="string">&quot;r&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> file:</span><br><span class="line">	<span class="built_in">print</span>(line)</span><br><span class="line">	</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="数据的文件写入"><a href="#数据的文件写入" class="headerlink" title="数据的文件写入"></a>数据的文件写入</h3><p>:one: <filename>.write(s)：向文件写入一个字符串或字节流</p>
-<p>:two: <filename>.writelines(s)：将一个元素全为字符串的<strong>列表</strong>写入文件</p>
-<p>:three: <filename>.seek(offset)：改变当前文件操作指针的位置</p>
-<p>​      :small_blue_diamond:offset参数：0—&gt;文件开头；1—&gt;当前位置；2—&gt;文件结尾</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&quot;xxx.txt&quot;</span>.<span class="string">&quot;w+&quot;</span>)</span><br><span class="line">ls = [<span class="string">&quot;a&quot;</span>,<span class="string">&quot;b&quot;</span>,<span class="string">&quot;c&quot;</span>]</span><br><span class="line"></span><br><span class="line">file.writelines(ls)</span><br><span class="line"></span><br><span class="line">file.seek(<span class="number">0</span>)   <span class="comment"># 若无指针移动，则在写入后指针位于文件最后，打印为空</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> file:</span><br><span class="line">	<span class="built_in">print</span>(line)</span><br><span class="line">	</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
       
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2022" class="archive-year">2022</a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2022/02/16/%E5%BA%8F%E5%88%97%E7%B1%BB%E5%9E%8B/" class="archive-article-date">
+  	<time datetime="2022-02-16T12:53:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-16</time>
+</a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2022/02/16/%E5%BA%8F%E5%88%97%E7%B1%BB%E5%9E%8B/">序列类型</a>
+    </h1>
+  
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/02/15/%E6%96%87%E4%BB%B6/" alt="微信分享二维码">
-    </div>
-</div>
+        <div class="article-info info-on-right">
+          
+          
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/python基础//" class="article-tag-list-link color4">python基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
   
-<nav id="article-nav">
-  
-    <a href="/2022/02/16/%E5%BA%8F%E5%88%97%E7%B1%BB%E5%9E%8B/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2022/01/23/%E9%9B%86%E5%90%88/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2022/02/16/%E6%96%87%E4%BB%B6/" class="archive-article-date">
+  	<time datetime="2022-02-16T12:48:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-16</time>
+</a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
+    	 
   
-  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2022/02/16/%E6%96%87%E4%BB%B6/">文件</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+          
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/python基础//" class="article-tag-list-link color4">python基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2022/02/16/%E9%9B%86%E5%90%88/" class="archive-article-date">
+  	<time datetime="2022-02-16T12:48:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-16</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2022/02/16/%E9%9B%86%E5%90%88/">集合</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+          
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/python基础//" class="article-tag-list-link color4">python基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
   
 
-  
+    
 
 
           </div>
@@ -398,10 +302,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
-		isCategory: false,
+		isCategory: true,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
