@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>6包含多个段的程序 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、对8个数进行累加12345678910111213assume cs:codesgcodesg segment	dw 0123h,0456h,0789h,0abch,0defh,0fedh,0cbah,0987h	mov bx,0	mov ax,0	mov cx,8s:add ax,cs:[bx]  add bx,2  loop s  mov ax,4c00h  int 21h codesg">
+  <meta name="description" content="1、对8个数进行累加">
 <meta property="og:type" content="article">
 <meta property="og:title" content="6包含多个段的程序">
 <meta property="og:url" content="http://example.com/2022/02/07/%E5%8C%85%E5%90%AB%E5%A4%9A%E4%B8%AA%E6%AE%B5%E7%9A%84%E7%A8%8B%E5%BA%8F/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1、对8个数进行累加12345678910111213assume cs:codesgcodesg segment	dw 0123h,0456h,0789h,0abch,0defh,0fedh,0cbah,0987h	mov bx,0	mov ax,0	mov cx,8s:add ax,cs:[bx]  add bx,2  loop s  mov ax,4c00h  int 21h codesg">
+<meta property="og:description" content="1、对8个数进行累加">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-02-07T11:29:15.000Z">
-<meta property="article:modified_time" content="2022-02-16T13:52:22.007Z">
+<meta property="article:modified_time" content="2022-02-18T11:44:09.407Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -158,7 +158,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1、对8个数进行累加"><a href="#1、对8个数进行累加" class="headerlink" title="1、对8个数进行累加"></a>1、对8个数进行累加</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">assume cs:codesg</span><br><span class="line">codesg segment</span><br><span class="line">	dw 0123h,0456h,0789h,0abch,0defh,0fedh,0cbah,0987h</span><br><span class="line">	mov bx,0</span><br><span class="line">	mov ax,0</span><br><span class="line">	mov cx,8</span><br><span class="line">s:add ax,cs:[bx]</span><br><span class="line">  add bx,2</span><br><span class="line">  loop s</span><br><span class="line">  mov ax,4c00h</span><br><span class="line">  int 21h</span><br><span class="line"> codesg ends</span><br><span class="line"> end</span><br></pre></td></tr></table></figure>
+        <h1 id="1、对8个数进行累加"><a href="#1、对8个数进行累加" class="headerlink" title="1、对8个数进行累加"></a>1、对8个数进行累加</h1><span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">assume cs:codesg</span><br><span class="line">codesg segment</span><br><span class="line">	dw 0123h,0456h,0789h,0abch,0defh,0fedh,0cbah,0987h</span><br><span class="line">	mov bx,0</span><br><span class="line">	mov ax,0</span><br><span class="line">	mov cx,8</span><br><span class="line">s:add ax,cs:[bx]</span><br><span class="line">  add bx,2</span><br><span class="line">  loop s</span><br><span class="line">  mov ax,4c00h</span><br><span class="line">  int 21h</span><br><span class="line"> codesg ends</span><br><span class="line"> end</span><br></pre></td></tr></table></figure>
 
 
 
