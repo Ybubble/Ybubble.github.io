@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://example.com">
+  <link rel="dns-prefetch" href="https://Ybubble.github.io">
   <title>2寄存器1 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="通用寄存器8086CPU有14个寄存器：AX..BX..CX..DX..SI..DI..SP..BP..IP..CS..SS..DS..ES..PSW 8086CPU所有的寄存器都是16位的，可以存放两个字节 AX..BX..CX..DX..通常用来存放一般性数据，被称为通用寄存器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2寄存器1">
-<meta property="og:url" content="http://example.com/2022/02/01/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%862--%E5%AF%84%E5%AD%98%E5%99%A8/index.html">
+<meta property="og:url" content="https://ybubble.github.io/2022/02/01/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%862--%E5%AF%84%E5%AD%98%E5%99%A8/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="通用寄存器8086CPU有14个寄存器：AX..BX..CX..DX..SI..DI..SP..BP..IP..CS..SS..DS..ES..PSW 8086CPU所有的寄存器都是16位的，可以存放两个字节 AX..BX..CX..DX..通常用来存放一般性数据，被称为通用寄存器">
 <meta property="og:locale" content="en_US">
@@ -41,9 +41,9 @@
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
-    <div class="left-col" q-class="show:isShow">
+    <div class="left-col" q-class="show:isShow"  style="background: D:/MINE/blog/themes/yilia/source/assets/bg.jpg no-repeat 100%;background-size:cover;opacity:0.8;filter:alpha(opacity=80);">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: rgba(0,0,0,0.5)"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -63,6 +63,9 @@
 	        
 			</ul>
 		</nav>
+<nav>
+    总文章数 49
+</nav>
 		<nav class="header-smart-menu">
     		
     			
@@ -73,9 +76,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 		        
 			</div>
 		</nav>
@@ -86,7 +87,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: rgba(0,0,0,0.5)"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -110,9 +111,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 			        
 				</div>
 			</nav>
@@ -170,9 +169,9 @@
 <h1 id="16位结构的CPU"><a href="#16位结构的CPU" class="headerlink" title="16位结构的CPU"></a>16位结构的CPU</h1><p>运算器一次最多可以处理16位的数据</p>
 <p>寄存器的最大宽度为16位</p>
 <p>寄存器和运算器之间的通路是16位</p>
-<h1 id="地址加法器的工作原理"><a href="#地址加法器的工作原理" class="headerlink" title="地址加法器的工作原理"></a>地址加法器的工作原理</h1><p>地址加法器合成物理地址的方法：物理地址=段地址*16（16进制的数，左移一位）+偏移地址</p>
+<h1 id="地址加法器的工作原理"><a href="#地址加法器的工作原理" class="headerlink" title="地址加法器的工作原理"></a>地址加法器的工作原理</h1><p>地址加法器合成物理地址的方法：物理地址&#x3D;段地址*16（16进制的数，左移一位）+偏移地址</p>
 <h1 id="段的概念"><a href="#段的概念" class="headerlink" title="段的概念"></a>段的概念</h1><p>内存并没有分段，段的划分来自于CPU</p>
-<p>由于8086CPU用“（段的地址*16）+偏移地址=物理地址”的方式给出内存单元的物理地址，使得我们可以用分段的方式来管理内存</p>
+<p>由于8086CPU用“（段的地址*16）+偏移地址&#x3D;物理地址”的方式给出内存单元的物理地址，使得我们可以用分段的方式来管理内存</p>
 <p>段地址*16必然是16的倍数，所以一个段的起始地址也一定是16的倍数</p>
 <p>偏移地址为16位，16位地址的寻址能力为64k，所以一个段的最大长度为64K</p>
 <p>偏移地址16位，变化范围为0~FFFFH，仅用偏移地址来寻址最多可以寻64K个内存地址</p>
@@ -181,11 +180,11 @@
 <h1 id="CS和IP"><a href="#CS和IP" class="headerlink" title="CS和IP"></a>CS和IP</h1><p>CS（代码段寄存器）和IP（指令指针寄存器）是8086CPU中最关键的寄存器，它们指示了CPU当前要读取指令的地址</p>
 <h5 id="8086PC工作过程的简要描述"><a href="#8086PC工作过程的简要描述" class="headerlink" title="8086PC工作过程的简要描述"></a>8086PC工作过程的简要描述</h5><ul>
 <li>从CS：IP指向内存参院读取指令，读取的指令进入指令缓存器</li>
-<li>IP=IP+所读取指令的长度，从而指向下一条指令</li>
+<li>IP&#x3D;IP+所读取指令的长度，从而指向下一条指令</li>
 <li>指令指令</li>
 <li>返回第一步，重复整个过程</li>
 </ul>
-<p>在8086CPU加电启动或复位后（即CPU刚开始工作时）CS和IP被设置为CS=FFFFH，IP=0000H</p>
+<p>在8086CPU加电启动或复位后（即CPU刚开始工作时）CS和IP被设置为CS&#x3D;FFFFH，IP&#x3D;0000H</p>
 <p>即在8086PC机刚启动时，CPU从内存FFFF0H单元中读取指令执行</p>
 <p>FFFF0H单元中的指令时8086PC机开机后执行的第一条指令</p>
 <p>在任何时候，CPU将CS、IP中的内容当作指令的段地址和偏移地址，用它们合成指令的物理地址，到内存中读取指令码，执行</p>
@@ -207,7 +206,7 @@
 </li>
 </ul>
 <h1 id="代码段"><a href="#代码段" class="headerlink" title="代码段"></a>代码段</h1><p>对于8086PC机，在编程时，可以根据需要将一组内存单元定义为一个段</p>
-<p>可以将长度为N（N&lt;=64KB）的一组代码，存在一组地址连续、起始地址为16的倍数的内存单元中，这段内存是用来存放代码的，从而定义了一个代码段</p>
+<p>可以将长度为N（N&lt;&#x3D;64KB）的一组代码，存在一组地址连续、起始地址为16的倍数的内存单元中，这段内存是用来存放代码的，从而定义了一个代码段</p>
 <h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><ul>
 <li>段地址在8086CPU的寄存器中存放，当8086CPU要访问内存时，由段寄存器提供内存单元的段地址</li>
 <li>8086CPU有4个段寄存器，其中CS用来存放指令的段地址</li>
@@ -216,7 +215,7 @@
 <li>8086CPU的工作过程<ul>
 <li>从CS：IP指向内存单元读取指令，读取的指令进入指令缓冲器</li>
 <li>IP指向下一条指令</li>
-<li>执行指令（执行后IP=IP+所执行指令的长度）</li>
+<li>执行指令（执行后IP&#x3D;IP+所执行指令的长度）</li>
 <li>重复</li>
 </ul>
 </li>
@@ -321,7 +320,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/02/01/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%862--%E5%AF%84%E5%AD%98%E5%99%A8/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ybubble.github.io/2022/02/01/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%862--%E5%AF%84%E5%AD%98%E5%99%A8/" alt="微信分享二维码">
     </div>
 </div>
 

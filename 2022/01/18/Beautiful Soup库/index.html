@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://example.com">
+  <link rel="dns-prefetch" href="https://Ybubble.github.io">
   <title>3Beautiful Soup库 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Beautiful Soup库 能够解析html和xml文件的功能库 解析、遍历、维护“标签树”的功能库 亦称为beautifulsoup4或bs4">
 <meta property="og:type" content="article">
 <meta property="og:title" content="3Beautiful Soup库">
-<meta property="og:url" content="http://example.com/2022/01/18/Beautiful%20Soup%E5%BA%93/index.html">
+<meta property="og:url" content="https://ybubble.github.io/2022/01/18/Beautiful%20Soup%E5%BA%93/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Beautiful Soup库 能够解析html和xml文件的功能库 解析、遍历、维护“标签树”的功能库 亦称为beautifulsoup4或bs4">
 <meta property="og:locale" content="en_US">
@@ -41,9 +41,9 @@
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
-    <div class="left-col" q-class="show:isShow">
+    <div class="left-col" q-class="show:isShow"  style="background: D:/MINE/blog/themes/yilia/source/assets/bg.jpg no-repeat 100%;background-size:cover;opacity:0.8;filter:alpha(opacity=80);">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: rgba(0,0,0,0.5)"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -63,6 +63,9 @@
 	        
 			</ul>
 		</nav>
+<nav>
+    总文章数 49
+</nav>
 		<nav class="header-smart-menu">
     		
     			
@@ -73,9 +76,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 		        
 			</div>
 		</nav>
@@ -86,7 +87,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: rgba(0,0,0,0.5)"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -110,9 +111,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 			        
 				</div>
 			</nav>
@@ -167,11 +166,11 @@
 
 <ul>
 <li>最常用的引用方式：from  bs4  import  BeautifulSoup</li>
-<li>一般可以认为HTML文档、标签树、BeautifulSoup类三者等价，BeautifulSoup对应一个HTML/XML文档的全部内容</li>
+<li>一般可以认为HTML文档、标签树、BeautifulSoup类三者等价，BeautifulSoup对应一个HTML&#x2F;XML文档的全部内容</li>
 <li>bs4将任何读入的html文件或字符串都转换成了utf-8编码</li>
 <li>标签<ul>
-<li> &lt; p &gt;..&lt; /p &gt;：标签Tag</li>
-<li>&lt; p class=”title”&gt;…&lt; /p&gt;：p为名称（成对出现），其余为属性Attributes（0个或多个）</li>
+<li>&lt; p &gt;..&lt; &#x2F;p &gt;：标签Tag</li>
+<li>&lt; p class&#x3D;”title”&gt;…&lt; &#x2F;p&gt;：p为名称（成对出现），其余为属性Attributes（0个或多个）</li>
 </ul>
 </li>
 </ul>
@@ -213,11 +212,11 @@
 </thead>
 <tbody><tr>
 <td>Tag</td>
-<td>标签，最基本的信息组织元素，分别用&lt;&gt;和&lt;/&gt;标明开头和结尾</td>
+<td>标签，最基本的信息组织元素，分别用&lt;&gt;和&lt;&#x2F;&gt;标明开头和结尾</td>
 </tr>
 <tr>
 <td>Name</td>
-<td>标签的名字，&lt; p&gt;…&lt; /p&gt;的名字是“p”，格式：&lt; tag&gt;.name</td>
+<td>标签的名字，&lt; p&gt;…&lt; &#x2F;p&gt;的名字是“p”，格式：&lt; tag&gt;.name</td>
 </tr>
 <tr>
 <td>Attribute</td>
@@ -225,7 +224,7 @@
 </tr>
 <tr>
 <td>NavigableString</td>
-<td>标签内非属性字符串，&lt;&gt;…&lt; /&gt;中字符串，格式：&lt; tag&gt;.string</td>
+<td>标签内非属性字符串，&lt;&gt;…&lt; &#x2F;&gt;中字符串，格式：&lt; tag&gt;.string</td>
 </tr>
 <tr>
 <td>Comment</td>
@@ -399,7 +398,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/01/18/Beautiful%20Soup%E5%BA%93/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ybubble.github.io/2022/01/18/Beautiful%20Soup%E5%BA%93/" alt="微信分享二维码">
     </div>
 </div>
 

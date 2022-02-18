@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://example.com">
+  <link rel="dns-prefetch" href="https://Ybubble.github.io">
   <title>4第一个程序 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="一个源程序从写出到执行的过程 编写 用文本编辑器（记事本、Nodepad++、UltraEdit······），用汇编语言编写汇编源程序">
 <meta property="og:type" content="article">
 <meta property="og:title" content="4第一个程序">
-<meta property="og:url" content="http://example.com/2022/02/06/1%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F/index.html">
+<meta property="og:url" content="https://ybubble.github.io/2022/02/06/1%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="一个源程序从写出到执行的过程 编写 用文本编辑器（记事本、Nodepad++、UltraEdit······），用汇编语言编写汇编源程序">
 <meta property="og:locale" content="en_US">
@@ -41,9 +41,9 @@
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
-    <div class="left-col" q-class="show:isShow">
+    <div class="left-col" q-class="show:isShow"  style="background: D:/MINE/blog/themes/yilia/source/assets/bg.jpg no-repeat 100%;background-size:cover;opacity:0.8;filter:alpha(opacity=80);">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: rgba(0,0,0,0.5)"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -63,6 +63,9 @@
 	        
 			</ul>
 		</nav>
+<nav>
+    总文章数 49
+</nav>
 		<nav class="header-smart-menu">
     		
     			
@@ -73,9 +76,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 		        
 			</div>
 		</nav>
@@ -86,7 +87,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: rgba(0,0,0,0.5)"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -110,9 +111,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 			        
 				</div>
 			</nav>
@@ -252,7 +251,7 @@
 </ul>
 <h5 id="汇编程序从写出到执行的过程："><a href="#汇编程序从写出到执行的过程：" class="headerlink" title="汇编程序从写出到执行的过程："></a>汇编程序从写出到执行的过程：</h5><p>编程-&gt;1.asm-&gt;编译-&gt;1.obj-&gt;连接-&gt;1.exe-&gt;加载-&gt;内存中的程序-&gt;运行</p>
 <h5 id="debug"><a href="#debug" class="headerlink" title="debug"></a>debug</h5><p>debug可以将程序加载如内存，设置CS：IP指向程序的入口，但debug并不放弃对CPU的控制，这样就可以用debug的相关命令来单步执行程序，查看每条指令的执行结果</p>
-<h5 id="实例1"><a href="#实例1" class="headerlink" title="实例1"></a>实例1</h5><p>debug将程序从可执行文件加载入内存后，cx中存放的是程序的长度（cx=000F：程序的机器码共有15个字节）</p>
+<h5 id="实例1"><a href="#实例1" class="headerlink" title="实例1"></a>实例1</h5><p>debug将程序从可执行文件加载入内存后，cx中存放的是程序的长度（cx&#x3D;000F：程序的机器码共有15个字节）</p>
 <p>exe文件中的程序的加载过程：</p>
 <ul>
 <li><p>找到一段起始地址为SA：0000（即起始地址的偏移地址为0）的容量足够的空闲内存区</p>
@@ -275,7 +274,7 @@
 <li><p>所以从ds中可以得到PSP的段地址SA，PSP的偏移地址为0，则物理地址为SA*16+0</p>
 </li>
 <li><p>因为PSP占256（100H）字节，所以程序的物理地址是：</p>
-<p>SA * 16+0+256=SA * 16+16 * 16=（SA+16）*16+0</p>
+<p>SA * 16+0+256&#x3D;SA * 16+16 * 16&#x3D;（SA+16）*16+0</p>
 <p>可用段地址和偏移地址表示为SA+10：0</p>
 </li>
 </ul>
@@ -371,7 +370,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/02/06/1%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ybubble.github.io/2022/02/06/1%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -395,8 +394,8 @@
     </a>
   
   
-    <a href="/2022/02/03/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%863--%E5%AF%84%E5%AD%98%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">3寄存器2</div>
+    <a href="/2022/02/04/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97%E7%BC%96%E7%A8%8B%E5%AE%9E%E8%B7%B5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">栈和队列编程实践</div>
       <i class="icon-circle-right"></i>
     </a>
   

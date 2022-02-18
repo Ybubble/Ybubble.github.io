@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://example.com">
+  <link rel="dns-prefetch" href="https://Ybubble.github.io">
   <title>3寄存器2 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="内存中字的存储两个16进制位对应一个字节，两个字节对应一个位 任何两个地址连续的内存单元，N号单元和N+1号单元，可以将它们看成两个内存单元，也可以看成一个地址为N的字单元中的高位字节单元和低位字节单元">
 <meta property="og:type" content="article">
 <meta property="og:title" content="3寄存器2">
-<meta property="og:url" content="http://example.com/2022/02/03/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%863--%E5%AF%84%E5%AD%98%E5%99%A8/index.html">
+<meta property="og:url" content="https://ybubble.github.io/2022/02/03/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%863--%E5%AF%84%E5%AD%98%E5%99%A8/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="内存中字的存储两个16进制位对应一个字节，两个字节对应一个位 任何两个地址连续的内存单元，N号单元和N+1号单元，可以将它们看成两个内存单元，也可以看成一个地址为N的字单元中的高位字节单元和低位字节单元">
 <meta property="og:locale" content="en_US">
@@ -41,9 +41,9 @@
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
-    <div class="left-col" q-class="show:isShow">
+    <div class="left-col" q-class="show:isShow"  style="background: D:/MINE/blog/themes/yilia/source/assets/bg.jpg no-repeat 100%;background-size:cover;opacity:0.8;filter:alpha(opacity=80);">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: rgba(0,0,0,0.5)"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -63,6 +63,9 @@
 	        
 			</ul>
 		</nav>
+<nav>
+    总文章数 49
+</nav>
 		<nav class="header-smart-menu">
     		
     			
@@ -73,9 +76,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 		        
 			</div>
 		</nav>
@@ -86,7 +87,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: rgba(0,0,0,0.5)"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -110,9 +111,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 			        
 				</div>
 			</nav>
@@ -208,22 +207,22 @@
 <p>任意时刻，SS：SP指向栈顶元素</p>
 <h5 id="pop-ax"><a href="#pop-ax" class="headerlink" title="pop ax"></a>pop ax</h5><ul>
 <li>将SS：SP指向的内存单元处的数据送入ax中</li>
-<li>SP=SP+2，SS：SP指向当前栈顶下面的单元，以当前栈顶下面的单元为新的栈顶</li>
+<li>SP&#x3D;SP+2，SS：SP指向当前栈顶下面的单元，以当前栈顶下面的单元为新的栈顶</li>
 </ul>
 <p>用栈来暂存以后需要恢复的寄存器中的内容时，出栈的顺序要和入栈的顺序相反，因为最后入栈的寄存器的内容在栈顶，所以在恢复时，要最先出栈</p>
 <p>push、pop实质上就是一种内存的传送指令，可以在寄存器和内存之间传送数据，与mov指令不同的是，push和pop指令访问的内存单元的地址不是在指令中给出的，而是由SS：SP指出的</p>
 <p>push、pop等栈操作指令，修改的只是SP，栈顶的变化范围最大为0~FFFFH</p>
 <h1 id="栈段"><a href="#栈段" class="headerlink" title="栈段"></a>栈段</h1><p>对于8086PC机，在编程时，可以根据需要，将一段内存单元定义为一个段</p>
-<p>将长度为N（N&lt;=64K）的一组地址连续、起始地址为16的倍数的内存单元当作栈来使用，从而定义了一个栈段</p>
+<p>将长度为N（N&lt;&#x3D;64K）的一组地址连续、起始地址为16的倍数的内存单元当作栈来使用，从而定义了一个栈段</p>
 <p>比如将10010H~1001FH这段长度为16字节的内存空间当作栈来用，以栈的方式进行访问：这段空间就可以成为栈段，段地址为1000H，大小为16字节</p>
 <p>栗子：</p>
 <ul>
-<li>将10000H~1FFFFH这段空间当作栈段，SS=1000H，栈空间大小为64KB，栈最底部的字单元为1000：FFFE</li>
-<li>任意时刻，SS：SP指向栈顶，当栈中只有一个元素时，SS=1000H，SP=FFFEH</li>
-<li>栈为空，就相当于栈中唯一的元素出栈，出栈后，SP=SP+2</li>
-<li>SP原来为FFFFEH，加2后SP=0，所以当栈为空时，SS=1000H，sp=0</li>
+<li>将10000H~1FFFFH这段空间当作栈段，SS&#x3D;1000H，栈空间大小为64KB，栈最底部的字单元为1000：FFFE</li>
+<li>任意时刻，SS：SP指向栈顶，当栈中只有一个元素时，SS&#x3D;1000H，SP&#x3D;FFFEH</li>
+<li>栈为空，就相当于栈中唯一的元素出栈，出栈后，SP&#x3D;SP+2</li>
+<li>SP原来为FFFFEH，加2后SP&#x3D;0，所以当栈为空时，SS&#x3D;1000H，sp&#x3D;0</li>
 <li>换个角度：<ul>
-<li>任意时刻，SS：SP指向栈顶元素，当栈为空时，栈中没有元素，也就不存在栈顶元素，所以SS：SP只能指向栈的最底部单元下面的单元，该单元的偏移地址为栈最底部的字单元的偏移地址+2，栈最底部字单元的地址为1000：FFFE，所以栈空时SP=0000H</li>
+<li>任意时刻，SS：SP指向栈顶元素，当栈为空时，栈中没有元素，也就不存在栈顶元素，所以SS：SP只能指向栈的最底部单元下面的单元，该单元的偏移地址为栈最底部的字单元的偏移地址+2，栈最底部字单元的地址为1000：FFFE，所以栈空时SP&#x3D;0000H</li>
 </ul>
 </li>
 </ul>
@@ -317,7 +316,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/02/03/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%863--%E5%AF%84%E5%AD%98%E5%99%A8/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ybubble.github.io/2022/02/03/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%863--%E5%AF%84%E5%AD%98%E5%99%A8/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -331,11 +330,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/02/06/1%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/02/04/%E6%9F%A5%E6%89%BE%E7%BC%96%E7%A8%8B%E5%AE%9E%E8%B7%B5/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          4第一个程序
+          查找编程实践
         
       </div>
     </a>

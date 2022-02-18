@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://example.com">
+  <link rel="dns-prefetch" href="https://Ybubble.github.io">
   <title>14端口 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="引言 CPU可以直接读写3个地方的数据： 1、CPU内部的寄存器 2、内存单元 3、端口">
 <meta property="og:type" content="article">
 <meta property="og:title" content="14端口">
-<meta property="og:url" content="http://example.com/2022/02/14/14%E7%AB%AF%E5%8F%A3/index.html">
+<meta property="og:url" content="https://ybubble.github.io/2022/02/14/14%E7%AB%AF%E5%8F%A3/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="引言 CPU可以直接读写3个地方的数据： 1、CPU内部的寄存器 2、内存单元 3、端口">
 <meta property="og:locale" content="en_US">
@@ -41,9 +41,9 @@
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
-    <div class="left-col" q-class="show:isShow">
+    <div class="left-col" q-class="show:isShow"  style="background: D:/MINE/blog/themes/yilia/source/assets/bg.jpg no-repeat 100%;background-size:cover;opacity:0.8;filter:alpha(opacity=80);">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: rgba(0,0,0,0.5)"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -63,6 +63,9 @@
 	        
 			</ul>
 		</nav>
+<nav>
+    总文章数 49
+</nav>
 		<nav class="header-smart-menu">
     		
     			
@@ -73,9 +76,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 		        
 			</div>
 		</nav>
@@ -86,7 +87,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: rgba(0,0,0,0.5)"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -110,9 +111,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 			        
 				</div>
 			</nav>
@@ -172,7 +171,7 @@
 </li>
 <li><p>CPU执行内存访问指令和端口访问指令时，总线上的信息：</p>
 <p>1、访问内存</p>
-<p>mov ax,ds:[8]，假设执行前（ds）=0，则执行时与总线相关的操作</p>
+<p>mov ax,ds:[8]，假设执行前（ds）&#x3D;0，则执行时与总线相关的操作</p>
 <ul>
 <li>CPU通过地址线将地址信息”8”发出</li>
 <li>CPU通过控制线发出内存读命令，选中存储器芯片，并通知它将要从中读取数据</li>
@@ -277,7 +276,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/02/14/14%E7%AB%AF%E5%8F%A3/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ybubble.github.io/2022/02/14/14%E7%AB%AF%E5%8F%A3/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -291,18 +290,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/02/14/11%E6%A0%87%E5%BF%97%E5%AF%84%E5%AD%98%E5%99%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/02/14/12%E5%86%85%E4%B8%AD%E6%96%AD/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          11标志寄存器
+          12内中断
         
       </div>
     </a>
   
   
-    <a href="/2022/02/13/10call%E5%92%8Cret%E6%8C%87%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">10call和ret指令</div>
+    <a href="/2022/02/14/11%E6%A0%87%E5%BF%97%E5%AF%84%E5%AD%98%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">11标志寄存器</div>
       <i class="icon-circle-right"></i>
     </a>
   

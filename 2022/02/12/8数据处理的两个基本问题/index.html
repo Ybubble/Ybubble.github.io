@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://example.com">
+  <link rel="dns-prefetch" href="https://Ybubble.github.io">
   <title>8数据处理的两个基本问题 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="reg：寄存器 sreg：段寄存器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="8数据处理的两个基本问题">
-<meta property="og:url" content="http://example.com/2022/02/12/8%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E7%9A%84%E4%B8%A4%E4%B8%AA%E5%9F%BA%E6%9C%AC%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:url" content="https://ybubble.github.io/2022/02/12/8%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E7%9A%84%E4%B8%A4%E4%B8%AA%E5%9F%BA%E6%9C%AC%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="reg：寄存器 sreg：段寄存器">
 <meta property="og:locale" content="en_US">
@@ -41,9 +41,9 @@
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
-    <div class="left-col" q-class="show:isShow">
+    <div class="left-col" q-class="show:isShow"  style="background: D:/MINE/blog/themes/yilia/source/assets/bg.jpg no-repeat 100%;background-size:cover;opacity:0.8;filter:alpha(opacity=80);">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: rgba(0,0,0,0.5)"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -63,6 +63,9 @@
 	        
 			</ul>
 		</nav>
+<nav>
+    总文章数 49
+</nav>
 		<nav class="header-smart-menu">
     		
     			
@@ -73,9 +76,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 		        
 			</div>
 		</nav>
@@ -86,7 +87,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: rgba(0,0,0,0.5)"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -110,9 +111,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 			        
 				</div>
 			</nav>
@@ -185,7 +184,7 @@
 </li>
 <li><p>如mov ax,1</p>
 <p>对应机器码：B80100</p>
-<p>执行结构：（ax）=1</p>
+<p>执行结构：（ax）&#x3D;1</p>
 </li>
 </ul>
 <h1 id="寻址方式小结"><a href="#寻址方式小结" class="headerlink" title="寻址方式小结"></a>寻址方式小结</h1><table>
@@ -199,31 +198,31 @@
 </thead>
 <tbody><tr>
 <td>[idata]</td>
-<td>EA=idata;SA=(ds)</td>
+<td>EA&#x3D;idata;SA&#x3D;(ds)</td>
 <td>直接寻址</td>
 <td>[idata]</td>
 </tr>
 <tr>
 <td>[bx]<br />[si]<br />[di]<br />[bp]</td>
-<td>EA=(bx);SA=(ds)<br />EA=(si);SA=(ds)<br />EA=(di);SA=(ds)<br />EA=(bp);SA=(ss)</td>
+<td>EA&#x3D;(bx);SA&#x3D;(ds)<br />EA&#x3D;(si);SA&#x3D;(ds)<br />EA&#x3D;(di);SA&#x3D;(ds)<br />EA&#x3D;(bp);SA&#x3D;(ss)</td>
 <td>寄存器间接寻址</td>
 <td>[bx]</td>
 </tr>
 <tr>
 <td>[bx+idata]<br />[si+idata]<br />[di+idata]<br />[bp+idata]</td>
-<td>EA=(bx)+idata;SA=(ds)<br />EA=(si)+idata;SA=(ds)<br />EA=(di)+idata;SA=(ds)<br />EA=(bp)+idata;SA=(ss)</td>
+<td>EA&#x3D;(bx)+idata;SA&#x3D;(ds)<br />EA&#x3D;(si)+idata;SA&#x3D;(ds)<br />EA&#x3D;(di)+idata;SA&#x3D;(ds)<br />EA&#x3D;(bp)+idata;SA&#x3D;(ss)</td>
 <td>寄存器相对寻址</td>
 <td>用于结构体：[bx].idata<br />用于数组：idata[si],idata[di]<br />用于二维数组：[bx] [idata]</td>
 </tr>
 <tr>
 <td>[bx+si]<br />[bx+di]<br />[bp+si]<br />[bp+di]</td>
-<td>EA=(bx)+(si);SA=(ds)<br />EA=(bx)+(di);SA=(ds)<br />EA=(bp)+(si);SA=(ss)<br />EA=(bp)+(di);SA=(ss)</td>
+<td>EA&#x3D;(bx)+(si);SA&#x3D;(ds)<br />EA&#x3D;(bx)+(di);SA&#x3D;(ds)<br />EA&#x3D;(bp)+(si);SA&#x3D;(ss)<br />EA&#x3D;(bp)+(di);SA&#x3D;(ss)</td>
 <td>基址变址寻址</td>
 <td>用于二维数组：[bx] [si]</td>
 </tr>
 <tr>
 <td>[bx+si+idata]<br />[bx+di+idata]<br />[bp+si+idata]<br />[bp+di+idata]</td>
-<td>EA=(bx)+(si)+idata;SA=(ds)<br />EA=(bx)+(di)+idata;SA=(ds)<br />EA=(bp)+(si)+idata;SA=(ss)<br />EA=(bp)+(di)+idata;SA=(ss)</td>
+<td>EA&#x3D;(bx)+(si)+idata;SA&#x3D;(ds)<br />EA&#x3D;(bx)+(di)+idata;SA&#x3D;(ds)<br />EA&#x3D;(bp)+(si)+idata;SA&#x3D;(ss)<br />EA&#x3D;(bp)+(di)+idata;SA&#x3D;(ss)</td>
 <td>相对基址变址寻址</td>
 <td>用于表格（结构）中的数组项：[bx].idata[si]<br />用于二维数组：idata[bx] [si]</td>
 </tr>
@@ -284,22 +283,22 @@
 <ul>
 <li><p>div byte ptr ds:[0]</p>
 <ul>
-<li><p>(al)=(ax)/((ds)*16+0)的商</p>
+<li><p>(al)&#x3D;(ax)&#x2F;((ds)*16+0)的商</p>
 </li>
-<li><p>(ah)=(ax)/((ds)*16+0)的余数</p>
+<li><p>(ah)&#x3D;(ax)&#x2F;((ds)*16+0)的余数</p>
 </li>
 </ul>
 </li>
 <li><p>div word ptr es:[0]</p>
 <ul>
-<li>(ax)=[(dx) * 10000H+(ax)] / ((ds) * 16+0)的商</li>
-<li>(dx)=[(dx) * 10000H+(ax)] / ((ds) * 16+0)的余数</li>
+<li>(ax)&#x3D;[(dx) * 10000H+(ax)] &#x2F; ((ds) * 16+0)的商</li>
+<li>(dx)&#x3D;[(dx) * 10000H+(ax)] &#x2F; ((ds) * 16+0)的余数</li>
 </ul>
 </li>
 </ul>
 </li>
 <li><p>实例：</p>
-<p>用除法指令计算100001/100</p>
+<p>用除法指令计算100001&#x2F;100</p>
 <p>（被除数100001大于65535，不能用ax寄存器存放，所以要用dx和ax两个寄存器联合存放100001，也就是说要进行16位的除法）</p>
 </li>
 </ul>
@@ -484,7 +483,7 @@
 <h6 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h6><ul>
 <li><p>源数据在哪里（注意从0开始）（放在ds中）</p>
 <ul>
-<li>年份：0-53H    [21*4(4个字节)=84=54H]</li>
+<li>年份：0-53H    [21*4(4个字节)&#x3D;84&#x3D;54H]</li>
 <li>收入：54H-0A7H   （不能以字母开头，故写为0A7）</li>
 <li>雇员：0A8H-0D1</li>
 </ul>
@@ -504,13 +503,17 @@
 
 <h6 id="每次循环要执行的任务："><a href="#每次循环要执行的任务：" class="headerlink" title="每次循环要执行的任务："></a>每次循环要执行的任务：</h6><ul>
 <li><p>存放年份(4个字节)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mov al,[bx]   ;例如1</span><br><span class="line">mov es:[di],al</span><br><span class="line">mov al,[bx+1]   ;9</span><br><span class="line">mov e:[di+1],al</span><br><span class="line">mov al,[bx+2]    ;8</span><br><span class="line">mov es:[di+2],al</span><br><span class="line">mov al,[bx+3]   ;9</span><br><span class="line">mov es:[di+3],al</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mov al,[bx]   ;例如1</span><br><span class="line">mov es:[di],al</span><br><span class="line">mov al,[bx+1]   ;9</span><br><span class="line">mov e:[di+1],al</span><br><span class="line">mov al,[bx+2]    ;8</span><br><span class="line">mov es:[di+2],al</span><br><span class="line">mov al,[bx+3]   ;9</span><br><span class="line">mov es:[di+3],al</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>存放公司总收入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mov ax,54h[bx]   ;第一个‘年收入’的段地址为54H</span><br><span class="line">mov dx,56h[bx]</span><br><span class="line">mov es:5h[di],ax</span><br><span class="line">mov es:7h[di],dx</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mov ax,54h[bx]   ;第一个‘年收入’的段地址为54H</span><br><span class="line">mov dx,56h[bx]</span><br><span class="line">mov es:5h[di],ax</span><br><span class="line">mov es:7h[di],dx</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>存放公司人数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mov ax,0A8h[si]   ;第一个‘人数’的段基址为0A8H</span><br><span class="line">mov es:0Ah[di],ax</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mov ax,0A8h[si]   ;第一个‘人数’的段基址为0A8H</span><br><span class="line">mov es:0Ah[di],ax</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>计算人均收入并存放</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mov ax,54h[bx]</span><br><span class="line">mov dx,56h[bx]   ;这两句初始化被除数</span><br><span class="line"></span><br><span class="line">div word ptr ds:0A8h[si]  ;除以人数（16位除数，商默认放在ax中）</span><br><span class="line">mov es:0dh[di],ax   ;将商放入指定位置</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mov ax,54h[bx]</span><br><span class="line">mov dx,56h[bx]   ;这两句初始化被除数</span><br><span class="line"></span><br><span class="line">div word ptr ds:0A8h[si]  ;除以人数（16位除数，商默认放在ax中）</span><br><span class="line">mov es:0dh[di],ax   ;将商放入指定位置</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>为下一次循环时存放数据做准备</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">add bx,4  ;bx确定年份和收入</span><br><span class="line">add si,2  ;si确定人数</span><br><span class="line">add di,16 ;di确定每行的列数</span><br></pre></td></tr></table></figure></li>
 </ul>
@@ -608,7 +611,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/02/12/8%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E7%9A%84%E4%B8%A4%E4%B8%AA%E5%9F%BA%E6%9C%AC%E9%97%AE%E9%A2%98/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ybubble.github.io/2022/02/12/8%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E7%9A%84%E4%B8%A4%E4%B8%AA%E5%9F%BA%E6%9C%AC%E9%97%AE%E9%A2%98/" alt="微信分享二维码">
     </div>
 </div>
 

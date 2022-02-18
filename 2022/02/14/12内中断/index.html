@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://example.com">
+  <link rel="dns-prefetch" href="https://Ybubble.github.io">
   <title>12内中断 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="引言 中断：CPU处理外部突发事件 引起中断的原因或者说发出中断请求的来源叫做中断源">
 <meta property="og:type" content="article">
 <meta property="og:title" content="12内中断">
-<meta property="og:url" content="http://example.com/2022/02/14/12%E5%86%85%E4%B8%AD%E6%96%AD/index.html">
+<meta property="og:url" content="https://ybubble.github.io/2022/02/14/12%E5%86%85%E4%B8%AD%E6%96%AD/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="引言 中断：CPU处理外部突发事件 引起中断的原因或者说发出中断请求的来源叫做中断源">
 <meta property="og:locale" content="en_US">
@@ -41,9 +41,9 @@
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
-    <div class="left-col" q-class="show:isShow">
+    <div class="left-col" q-class="show:isShow"  style="background: D:/MINE/blog/themes/yilia/source/assets/bg.jpg no-repeat 100%;background-size:cover;opacity:0.8;filter:alpha(opacity=80);">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: rgba(0,0,0,0.5)"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -63,6 +63,9 @@
 	        
 			</ul>
 		</nav>
+<nav>
+    总文章数 49
+</nav>
 		<nav class="header-smart-menu">
     		
     			
@@ -73,9 +76,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 		        
 			</div>
 		</nav>
@@ -86,7 +87,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: rgba(0,0,0,0.5)"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -110,9 +111,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 			        
 				</div>
 			</nav>
@@ -221,10 +220,10 @@
 <li><p>简洁描述</p>
 <p>1、取得中断类型码N</p>
 <p>2、pushf</p>
-<p>3、TF=0，IF=0</p>
+<p>3、TF&#x3D;0，IF&#x3D;0</p>
 <p>4、push CS</p>
 <p>5、push IP</p>
-<p>6、（IP）=（N*4），（cs）=（N * 4+2）</p>
+<p>6、（IP）&#x3D;（N*4），（cs）&#x3D;（N * 4+2）</p>
 </li>
 </ul>
 <h1 id="中断处理程序-1"><a href="#中断处理程序-1" class="headerlink" title="中断处理程序"></a>中断处理程序</h1><ul>
@@ -330,7 +329,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/02/14/12%E5%86%85%E4%B8%AD%E6%96%AD/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ybubble.github.io/2022/02/14/12%E5%86%85%E4%B8%AD%E6%96%AD/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -354,8 +353,8 @@
     </a>
   
   
-    <a href="/2022/02/14/11%E6%A0%87%E5%BF%97%E5%AF%84%E5%AD%98%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">11标志寄存器</div>
+    <a href="/2022/02/14/14%E7%AB%AF%E5%8F%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">14端口</div>
       <i class="icon-circle-right"></i>
     </a>
   

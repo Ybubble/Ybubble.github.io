@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://example.com">
+  <link rel="dns-prefetch" href="https://Ybubble.github.io">
   <title>文件 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="文件文件的类型文件的定义：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="文件">
-<meta property="og:url" content="http://example.com/2022/02/16/%E6%96%87%E4%BB%B6/index.html">
+<meta property="og:url" content="https://ybubble.github.io/2022/02/16/%E6%96%87%E4%BB%B6/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="文件文件的类型文件的定义：">
 <meta property="og:locale" content="en_US">
@@ -41,9 +41,9 @@
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
-    <div class="left-col" q-class="show:isShow">
+    <div class="left-col" q-class="show:isShow"  style="background: D:/MINE/blog/themes/yilia/source/assets/bg.jpg no-repeat 100%;background-size:cover;opacity:0.8;filter:alpha(opacity=80);">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: rgba(0,0,0,0.5)"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -63,6 +63,9 @@
 	        
 			</ul>
 		</nav>
+<nav>
+    总文章数 49
+</nav>
 		<nav class="header-smart-menu">
     		
     			
@@ -73,9 +76,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 		        
 			</div>
 		</nav>
@@ -86,7 +87,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: rgba(0,0,0,0.5)"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -110,9 +111,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 			        
 				</div>
 			</nav>
@@ -185,9 +184,9 @@
 <!--more-->
 
 <h3 id="文件的打开和关闭"><a href="#文件的打开和关闭" class="headerlink" title="文件的打开和关闭"></a>文件的打开和关闭</h3><h6 id="文件的打开"><a href="#文件的打开" class="headerlink" title="文件的打开"></a>文件的打开</h6><ul>
-<li><p>格式：&lt;变量名&gt; = open( &lt;文件路径&gt; , &lt;打开模式&gt;)</p>
+<li><p>格式：&lt;变量名&gt; &#x3D; open( &lt;文件路径&gt; , &lt;打开模式&gt;)</p>
 <p>:small_blue_diamond:与源文件同目录可以省略路径</p>
-<p>:small_blue_diamond:C:/…/…/xxx.txt、C: \ \ … \ \ … \ \ xxx.txt（python中 ‘ \ ‘表示转义符）</p>
+<p>:small_blue_diamond:C:&#x2F;…&#x2F;…&#x2F;xxx.txt、C: \ \ … \ \ … \ \ xxx.txt（python中 ‘ \ ‘表示转义符）</p>
 </li>
 <li><p>打开</p>
 <p>:one: r：只读，默认值，如果文件不存在，返回FileNotFoundError</p>
@@ -196,7 +195,7 @@
 <p>:four: a：追加写，文件不存在则创建，存在则在文件最后追加内容</p>
 <p>:five: b：二进制文件模式</p>
 <p>:six: t：文本文件模式，默认值</p>
-<p>:seven: +：与r/w/x/a一起使用，在原功能基础上增加同时读写功能</p>
+<p>:seven: +：与r&#x2F;w&#x2F;x&#x2F;a一起使用，在原功能基础上增加同时读写功能</p>
 <p>例：rt：只读、a+：追加写+读文件、wb：二进制+覆盖写</p>
 </li>
 <li><p>关闭</p>
@@ -206,9 +205,9 @@
 <h3 id="文件内容的读取"><a href="#文件内容的读取" class="headerlink" title="文件内容的读取"></a>文件内容的读取</h3><ul>
 <li>常用操作：</li>
 </ul>
-<p>:one: <filename>.read(size=-1)：读入<strong>全部</strong>内容，如果给出参数，读入长度为size</p>
-<p>:two: <filename>.readline(size=-1)：读入<strong>一行</strong>内容，如果给出参数，读入长度为size</p>
-<p>:three: <filename>.readlines(hint=-1)：读入<strong>所有行</strong>内容，以<strong>每行</strong>为一个元素形成<strong>列表</strong>，如果给出参数，读入行数为hint</p>
+<p>:one: <filename>.read(size&#x3D;-1)：读入<strong>全部</strong>内容，如果给出参数，读入长度为size</p>
+<p>:two: <filename>.readline(size&#x3D;-1)：读入<strong>一行</strong>内容，如果给出参数，读入长度为size</p>
+<p>:three: <filename>.readlines(hint&#x3D;-1)：读入<strong>所有行</strong>内容，以<strong>每行</strong>为一个元素形成<strong>列表</strong>，如果给出参数，读入行数为hint</p>
 <ul>
 <li><p>遍历方法</p>
 <ul>
@@ -219,7 +218,8 @@
 <ul>
 <li>（处理大文件）按数量读入，逐步处理</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(filename,<span class="string">&quot;r&quot;</span>)</span><br><span class="line">txt = file.read(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> txt != <span class="string">&quot; &quot;</span>:</span><br><span class="line">	txt = file.read(<span class="number">2</span>)</span><br><span class="line">	</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(filename,<span class="string">&quot;r&quot;</span>)</span><br><span class="line">txt = file.read(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> txt != <span class="string">&quot; &quot;</span>:</span><br><span class="line">	txt = file.read(<span class="number">2</span>)</span><br><span class="line">	</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>文件的逐行操作</p>
 <ul>
 <li>逐行遍历(占内存)</li>
@@ -331,7 +331,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/02/16/%E6%96%87%E4%BB%B6/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ybubble.github.io/2022/02/16/%E6%96%87%E4%BB%B6/" alt="微信分享二维码">
     </div>
 </div>
 

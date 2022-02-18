@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://example.com">
+  <link rel="dns-prefetch" href="https://Ybubble.github.io">
   <title>5正则表达式 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="定义正则表达式是用来简洁表达一组字符串的表达式，是一种通用的字符串表达框架">
 <meta property="og:type" content="article">
 <meta property="og:title" content="5正则表达式">
-<meta property="og:url" content="http://example.com/2022/01/20/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
+<meta property="og:url" content="https://ybubble.github.io/2022/01/20/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="定义正则表达式是用来简洁表达一组字符串的表达式，是一种通用的字符串表达框架">
 <meta property="og:locale" content="en_US">
@@ -41,9 +41,9 @@
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
-    <div class="left-col" q-class="show:isShow">
+    <div class="left-col" q-class="show:isShow"  style="background: D:/MINE/blog/themes/yilia/source/assets/bg.jpg no-repeat 100%;background-size:cover;opacity:0.8;filter:alpha(opacity=80);">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: rgba(0,0,0,0.5)"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -63,6 +63,9 @@
 	        
 			</ul>
 		</nav>
+<nav>
+    总文章数 49
+</nav>
 		<nav class="header-smart-menu">
     		
     			
@@ -73,9 +76,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 		        
 			</div>
 		</nav>
@@ -86,7 +87,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: rgba(0,0,0,0.5)"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -110,9 +111,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 			        
 				</div>
 			</nav>
@@ -322,7 +321,7 @@
 </tr>
 </tbody></table>
 <ul>
-<li><p>re.search(pattern,string,flags=0)</p>
+<li><p>re.search(pattern,string,flags&#x3D;0)</p>
 <ul>
 <li>在一个字符串中搜索匹配正则表达式的第一个位置，返回match对象</li>
 <li>pattern：正则表达式的字符串或原生字符串表示</li>
@@ -350,7 +349,7 @@
 </tr>
 </tbody></table>
 </li>
-<li><p>re.match(pattern,string,flags=0)</p>
+<li><p>re.match(pattern,string,flags&#x3D;0)</p>
 <ul>
 <li>从一个字符的开始位置起匹配正则表达式，返回match对象</li>
 <li>pattern：正则表达式的字符串或原生字符串表示</li>
@@ -358,23 +357,23 @@
 <li>flags：正则表达式使用时的控制标记</li>
 </ul>
 </li>
-<li><p>re.findall(pattern,string,flags=0)</p>
+<li><p>re.findall(pattern,string,flags&#x3D;0)</p>
 <ul>
 <li>搜索字符串，以列表类型返回全部能匹配的子串</li>
 </ul>
 </li>
-<li><p>re.split(pattern,string,maxsplit=0,flags=0)</p>
+<li><p>re.split(pattern,string,maxsplit&#x3D;0,flags&#x3D;0)</p>
 <ul>
 <li>将一个字符串按照正则表达式匹配结果进行分割，返回列表类型</li>
 <li>maxsplit：最大分割数，剩余部分作为最后一个元素输出</li>
 </ul>
 </li>
-<li><p>re.finditer(pattern,string,flags=0)</p>
+<li><p>re.finditer(pattern,string,flags&#x3D;0)</p>
 <ul>
 <li>搜索字符串，返回一个匹配结果的迭代类型，每个迭代元素是match对象</li>
 </ul>
 </li>
-<li><p>re.sub(pattern,repl,string,coount=0,flags=0)</p>
+<li><p>re.sub(pattern,repl,string,coount&#x3D;0,flags&#x3D;0)</p>
 <ul>
 <li>在一个字符串中替换所有匹配正则表达式的子串，返回替换后的字符串</li>
 <li>repl：替换匹配字符串的字符串</li>
@@ -565,7 +564,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/01/20/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ybubble.github.io/2022/01/20/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" alt="微信分享二维码">
     </div>
 </div>
 

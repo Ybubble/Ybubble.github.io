@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://example.com">
+  <link rel="dns-prefetch" href="https://Ybubble.github.io">
   <title>5[bx]和loop指令 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="[bx]和内存单元的描述1、完整地描述一个内存单元 内存单元的指针 内存单元的长度  2、用[0]表示一个内存单元时，0表示单元的偏移地址，段地址默认在ds中，单元的长度（类型）可以由具体指令的其他操作对象（比如寄存器）指出（如ax，al）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="5[bx]和loop指令">
-<meta property="og:url" content="http://example.com/2022/02/07/[bx]%E5%92%8Cloop%E6%8C%87%E4%BB%A4/index.html">
+<meta property="og:url" content="https://ybubble.github.io/2022/02/07/[bx]%E5%92%8Cloop%E6%8C%87%E4%BB%A4/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="[bx]和内存单元的描述1、完整地描述一个内存单元 内存单元的指针 内存单元的长度  2、用[0]表示一个内存单元时，0表示单元的偏移地址，段地址默认在ds中，单元的长度（类型）可以由具体指令的其他操作对象（比如寄存器）指出（如ax，al）">
 <meta property="og:locale" content="en_US">
@@ -41,9 +41,9 @@
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
-    <div class="left-col" q-class="show:isShow">
+    <div class="left-col" q-class="show:isShow"  style="background: D:/MINE/blog/themes/yilia/source/assets/bg.jpg no-repeat 100%;background-size:cover;opacity:0.8;filter:alpha(opacity=80);">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: rgba(0,0,0,0.5)"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -63,6 +63,9 @@
 	        
 			</ul>
 		</nav>
+<nav>
+    总文章数 49
+</nav>
 		<nav class="header-smart-menu">
     		
     			
@@ -73,9 +76,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 		        
 			</div>
 		</nav>
@@ -86,7 +87,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: rgba(0,0,0,0.5)"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -110,9 +111,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 			        
 				</div>
 			</nav>
@@ -171,12 +170,12 @@
 <h5 id="5、指令实例"><a href="#5、指令实例" class="headerlink" title="5、指令实例"></a>5、指令实例</h5><p>mov ax,[bx]</p>
 <ul>
 <li>功能：bx中存放的数据作为一个偏移地址EA，段地址SA默认在ds中，将SA：EA中的数据送入ax中</li>
-<li>即：（ax）=（ds*16+（bx））</li>
+<li>即：（ax）&#x3D;（ds*16+（bx））</li>
 </ul>
 <h5 id="6、"><a href="#6、" class="headerlink" title="6、"></a>6、</h5><p>inc：自增（相当于++）</p>
 <p>int 21：程序结尾</p>
 <h1 id="loop指令"><a href="#loop指令" class="headerlink" title="loop指令"></a>loop指令</h1><h5 id="1、格式：loop-标号"><a href="#1、格式：loop-标号" class="headerlink" title="1、格式：loop 标号"></a>1、格式：loop 标号</h5><h5 id="2、cx和loop非常相关"><a href="#2、cx和loop非常相关" class="headerlink" title="2、cx和loop非常相关"></a>2、cx和loop非常相关</h5><h5 id="3、loop指令分两步"><a href="#3、loop指令分两步" class="headerlink" title="3、loop指令分两步"></a>3、loop指令分两步</h5><ul>
-<li>(cx)=(cx)-1</li>
+<li>(cx)&#x3D;(cx)-1</li>
 <li>判断cx中的值，不为0则转至标号处执行程序，如果为0则向下执行</li>
 </ul>
 <h5 id="4、"><a href="#4、" class="headerlink" title="4、"></a>4、</h5><p>通常cx中存放着循环次数</p>
@@ -274,7 +273,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/02/07/[bx]%E5%92%8Cloop%E6%8C%87%E4%BB%A4/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ybubble.github.io/2022/02/07/[bx]%E5%92%8Cloop%E6%8C%87%E4%BB%A4/" alt="微信分享二维码">
     </div>
 </div>
 

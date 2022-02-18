@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://example.com">
+  <link rel="dns-prefetch" href="https://Ybubble.github.io">
   <title>10call和ret指令 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="ret和retfret ret指令用栈中的数据，修改IP的内容，从而实现近转移 CPU执行ret指令时，进行两步操作： （IP）&#x3D;（（ss）*16+（sp））—&gt;指向栈顶 （sp）&#x3D;（sp）+2   相当于pop IP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="10call和ret指令">
-<meta property="og:url" content="http://example.com/2022/02/13/10call%E5%92%8Cret%E6%8C%87%E4%BB%A4/index.html">
+<meta property="og:url" content="https://ybubble.github.io/2022/02/13/10call%E5%92%8Cret%E6%8C%87%E4%BB%A4/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="ret和retfret ret指令用栈中的数据，修改IP的内容，从而实现近转移 CPU执行ret指令时，进行两步操作： （IP）&#x3D;（（ss）*16+（sp））—&gt;指向栈顶 （sp）&#x3D;（sp）+2   相当于pop IP">
 <meta property="og:locale" content="en_US">
@@ -41,9 +41,9 @@
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
-    <div class="left-col" q-class="show:isShow">
+    <div class="left-col" q-class="show:isShow"  style="background: D:/MINE/blog/themes/yilia/source/assets/bg.jpg no-repeat 100%;background-size:cover;opacity:0.8;filter:alpha(opacity=80);">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: rgba(0,0,0,0.5)"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -63,6 +63,9 @@
 	        
 			</ul>
 		</nav>
+<nav>
+    总文章数 49
+</nav>
 		<nav class="header-smart-menu">
     		
     			
@@ -73,9 +76,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 		        
 			</div>
 		</nav>
@@ -86,7 +87,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: rgba(0,0,0,0.5)"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -110,9 +111,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 			        
 				</div>
 			</nav>
@@ -161,8 +160,8 @@
         <h1 id="ret和retf"><a href="#ret和retf" class="headerlink" title="ret和retf"></a>ret和retf</h1><h5 id="ret"><a href="#ret" class="headerlink" title="ret"></a>ret</h5><ul>
 <li>ret指令用栈中的数据，修改IP的内容，从而实现近转移</li>
 <li>CPU执行ret指令时，进行两步操作：<ul>
-<li>（IP）=（（ss）*16+（sp））—&gt;指向栈顶</li>
-<li>（sp）=（sp）+2</li>
+<li>（IP）&#x3D;（（ss）*16+（sp））—&gt;指向栈顶</li>
+<li>（sp）&#x3D;（sp）+2</li>
 </ul>
 </li>
 <li>相当于pop IP</li>
@@ -174,10 +173,10 @@
 </li>
 <li><p>执行时：</p>
 <ul>
-<li>（IP）=（（ss）*16+（sp））</li>
-<li>（sp）=（sp）+2</li>
-<li>（cs）=（（ss）*16+（sp））</li>
-<li>（sp）=（sp）+2</li>
+<li>（IP）&#x3D;（（ss）*16+（sp））</li>
+<li>（sp）&#x3D;（sp）+2</li>
+<li>（cs）&#x3D;（（ss）*16+（sp））</li>
+<li>（sp）&#x3D;（sp）+2</li>
 </ul>
 </li>
 <li><p>相当于pop IP、pop CS</p>
@@ -202,14 +201,14 @@
 </li>
 <li><p>CPU执行此种格式的call指令时，进行以下操作：</p>
 <ul>
-<li><p>（sp）=（sp）-2</p>
-<p>（（ss）*16+（sp））=（IP）</p>
+<li><p>（sp）&#x3D;（sp）-2</p>
+<p>（（ss）*16+（sp））&#x3D;（IP）</p>
 </li>
-<li><p>（IP）=（IP）+16位位移</p>
+<li><p>（IP）&#x3D;（IP）+16位位移</p>
 </li>
 </ul>
 </li>
-<li><p>16位位移=“标号”处的地址-call指令后的第一个字节的地址</p>
+<li><p>16位位移&#x3D;“标号”处的地址-call指令后的第一个字节的地址</p>
 </li>
 <li><p>16位位移的范围为-32768~32767，用补码表示</p>
 </li>
@@ -224,13 +223,13 @@
 </li>
 <li><p>CPU执行时的操作</p>
 <ul>
-<li><p>（sp）=（sp）-2</p>
-<p>（（ss）*16+（sp））=（CS）</p>
-<p>（sp）=（sp）-2</p>
-<p>（（ss）*16+（sp））=（IP）</p>
+<li><p>（sp）&#x3D;（sp）-2</p>
+<p>（（ss）*16+（sp））&#x3D;（CS）</p>
+<p>（sp）&#x3D;（sp）-2</p>
+<p>（（ss）*16+（sp））&#x3D;（IP）</p>
 </li>
-<li><p>（CS）=标号所在的段地址</p>
-<p>（IP）=标号所在的偏移地址</p>
+<li><p>（CS）&#x3D;标号所在的段地址</p>
+<p>（IP）&#x3D;标号所在的偏移地址</p>
 </li>
 </ul>
 </li>
@@ -245,9 +244,9 @@
 </li>
 <li><p>功能：</p>
 <ul>
-<li>（sp）=（sp）-2</li>
-<li>（（ss）*16+（sp））=（IP）</li>
-<li>（IP）=（16位寄存器）</li>
+<li>（sp）&#x3D;（sp）-2</li>
+<li>（（ss）*16+（sp））&#x3D;（IP）</li>
+<li>（IP）&#x3D;（16位寄存器）</li>
 </ul>
 </li>
 <li><p>相当于</p>
@@ -284,12 +283,12 @@
 <ul>
 <li><p>8位：AL中和8位寄存器或内存字节单元中（乘数默认在al中）</p>
 <p>​          结果保存在AX中</p>
-<p>mul byte ptr ds:[0]：(ax)=(al) * ((ds) * 16+0)</p>
+<p>mul byte ptr ds:[0]：(ax)&#x3D;(al) * ((ds) * 16+0)</p>
 </li>
 <li><p>16位：AX中和16位寄存器或内存字单元中</p>
 <p>​            结果保存在DX（高位）和AX（低位）中</p>
-<p>mul word ptr [bx+si+8]：(ax)=(ax) * ((ds) * 16+(bx)+(si)+8)结果的底16位</p>
-<p>​                                             (dx)=(ax) * ((ds) * 16+(bx)+(si)+8)结果的高16位</p>
+<p>mul word ptr [bx+si+8]：(ax)&#x3D;(ax) * ((ds) * 16+(bx)+(si)+8)结果的底16位</p>
+<p>​                                             (dx)&#x3D;(ax) * ((ds) * 16+(bx)+(si)+8)结果的高16位</p>
 </li>
 </ul>
 </li>
@@ -329,16 +328,16 @@
 
 
 <h1 id="实验10、"><a href="#实验10、" class="headerlink" title="实验10、"></a>实验10、</h1><h5 id="显示字符串"><a href="#显示字符串" class="headerlink" title="显示字符串"></a>显示字符串</h5><p>功能：在指定的位置用指定的颜色显示一个用</p>
-<p>参数：（dh）=行号（取值范围0~24），（dl）=列号（取值范围为0 ~ 79），（cl）=颜色，ds:si指向字符串的首地址</p>
+<p>参数：（dh）&#x3D;行号（取值范围0~24），（dl）&#x3D;列号（取值范围为0 ~ 79），（cl）&#x3D;颜色，ds:si指向字符串的首地址</p>
 <p>例：在屏幕的8行3列，用绿色显示data段中字符串</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line">assume cs:code</span><br><span class="line">data segment</span><br><span class="line">	db &#x27;welcome to masm!&#x27;,0</span><br><span class="line">data ends</span><br><span class="line">	</span><br><span class="line">code segment</span><br><span class="line">start:mov dh,8</span><br><span class="line">	  mov dl,3</span><br><span class="line">	  mov cl,2</span><br><span class="line">	  mov ds,ax</span><br><span class="line">	  mov si,0    ;偏移地址为0，指向第一个字符</span><br><span class="line">	  </span><br><span class="line">	  call show_str</span><br><span class="line">	  </span><br><span class="line">	  mov ax,4c00h</span><br><span class="line">	  int 21h</span><br><span class="line">	  </span><br><span class="line">	  </span><br><span class="line">show_start:</span><br><span class="line">		mov dh,8   ;dh装行号（范围：1~25）</span><br><span class="line">		mov dl,3   ;dl装列号（范围：1~80，每超过80等于行号自动+1）</span><br><span class="line">		mov cl,2   ;cl中存放颜色属性（0cah为红底高亮闪烁绿色属性）</span><br><span class="line">		</span><br><span class="line">		mov ax,data</span><br><span class="line">		</span><br><span class="line">		mov ds,ax</span><br><span class="line">		</span><br><span class="line">		mov si,0</span><br><span class="line">		</span><br><span class="line">		call show_str</span><br><span class="line">		</span><br><span class="line">		mov ax,4c00h</span><br><span class="line">		</span><br><span class="line">		int 21h</span><br><span class="line">		</span><br><span class="line">show_str:   ;显示字符串的子程序</span><br><span class="line">	push cx</span><br><span class="line">	push si</span><br><span class="line">	</span><br><span class="line">	mov al,0A0h</span><br><span class="line">	</span><br><span class="line">	dec dh   ;行号在显存中下标从0开始，所以-1</span><br><span class="line">	mul dh   ;相当于从第（n-1）*0A0h个byte单元开始</span><br><span class="line">	</span><br><span class="line">	mov bx,ax   ;定位好的位置偏移地址存放在bx里（行）</span><br><span class="line">	</span><br><span class="line">	mov al,2    ;每个字符占2个字节</span><br><span class="line">	mul dl      ;定位列，结果ax存放在的是定位好的列的位置</span><br><span class="line">	sub ax,2    ;列号在显存中下标从0开始，又因为偶字节存放字符，所以-2</span><br><span class="line">	</span><br><span class="line">	add bx,ax   ;此时bx中存放的是行与列号的偏移地址</span><br><span class="line">	</span><br><span class="line">	mov ax,0B800h  ;显存开始的地址</span><br><span class="line">	mov es,ax      ;es中存放的是显存的第0页（0-7页）的起始的段地址</span><br><span class="line">	</span><br><span class="line">	mov di,0       ;di指向显存的偏移地址,确定指向下一个要处理的字符的位置</span><br><span class="line">	</span><br><span class="line">	mov al,cl      ;cl是存放颜色的参数，这时候al存放颜色</span><br><span class="line">	</span><br><span class="line">	mov ch,0       ;下边cx存放的是每次准备处理的字符串</span><br><span class="line">	</span><br><span class="line">s:	mov cl,ds:[si]  ;ds:[si]指向“welcome to masm！”，0</span><br><span class="line">	</span><br><span class="line">	jcxz ok        ;当cl的值为0的时候，cx==0，则发生跳转，到ok处结束处理</span><br><span class="line">	</span><br><span class="line">	mov cs:[bx+di],cl  ;偶地址存放字符</span><br><span class="line">	mov cs:[bx+di+1],al  ;奇地址存到字符串的颜色属性</span><br><span class="line">	</span><br><span class="line">	inc si</span><br><span class="line">	</span><br><span class="line">	add di,2   ;指向下个字符串</span><br><span class="line">	jmp short s   ;无条件跳转，jcxz是离开的关键</span><br><span class="line">	</span><br><span class="line">ok:pop si</span><br><span class="line">   pop cx </span><br><span class="line">   </span><br><span class="line">   ret  ;显示字符串的子程序[定义结束]</span><br><span class="line"></span><br><span class="line">code ends</span><br><span class="line">end start</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h5 id="divdw-解决除法溢出问题"><a href="#divdw-解决除法溢出问题" class="headerlink" title="divdw(解决除法溢出问题)"></a>divdw(解决除法溢出问题)</h5><p>功能：进行不会产生溢出的除法运算，被除数为dword型，除数为word型，结果为dword型</p>
-<p>参数：（ax）=dword型数据的低16位</p>
-<p>​            （ds）=dword型数据的高16位</p>
-<p>​            （cx）=除数</p>
-<p>返回：（dx）=结果的高16位，（ax）=结果的低16位</p>
-<p>​            （cx）=余数</p>
+<p>参数：（ax）&#x3D;dword型数据的低16位</p>
+<p>​            （ds）&#x3D;dword型数据的高16位</p>
+<p>​            （cx）&#x3D;除数</p>
+<p>返回：（dx）&#x3D;结果的高16位，（ax）&#x3D;结果的低16位</p>
+<p>​            （cx）&#x3D;余数</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">assume cs:code</span><br><span class="line"></span><br><span class="line">code segment</span><br><span class="line"></span><br><span class="line">start:</span><br><span class="line">		mov ax,stack</span><br><span class="line">		</span><br><span class="line">		mov ss,ax</span><br><span class="line">		</span><br><span class="line">		mov sp,10h</span><br><span class="line">		</span><br><span class="line">		mov ax,4240h</span><br><span class="line">		</span><br><span class="line">		mov dx,0fh</span><br><span class="line">		</span><br><span class="line">		mov cx,0ah</span><br><span class="line">		</span><br><span class="line">		call divdw</span><br><span class="line">		</span><br><span class="line">		mov ax,4c00h</span><br><span class="line">		int 21h</span><br><span class="line">		</span><br><span class="line">divdw:</span><br><span class="line">		push ax        ;低16位先保存</span><br><span class="line">		</span><br><span class="line">		mov ax,dx      ;这时ax的值是高16位了</span><br><span class="line">		</span><br><span class="line">		mov dx,0       ;dx置0是为了不影响下边余数位</span><br><span class="line">		</span><br><span class="line">		div cx         ;H/H</span><br><span class="line">		</span><br><span class="line">		mov bx,ax      ;ax,bx的值为（int）H/H，dx的值为（rem）H/H</span><br><span class="line">		</span><br><span class="line">		pop ax         ;ax的值现在是L</span><br><span class="line">		</span><br><span class="line">		div cx         ;L/M,注意16位除法的时候默认被除数dx为高16位，ax为低16位</span><br><span class="line">		</span><br><span class="line">		mov cx,dx</span><br><span class="line">		</span><br><span class="line">		mov dx,bx</span><br><span class="line">		</span><br><span class="line">		ret </span><br><span class="line">		</span><br><span class="line">code ends</span><br><span class="line">end start</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		</span><br></pre></td></tr></table></figure>
 
 
@@ -435,7 +434,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/02/13/10call%E5%92%8Cret%E6%8C%87%E4%BB%A4/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ybubble.github.io/2022/02/13/10call%E5%92%8Cret%E6%8C%87%E4%BB%A4/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -449,11 +448,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/02/14/14%E7%AB%AF%E5%8F%A3/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/02/14/11%E6%A0%87%E5%BF%97%E5%AF%84%E5%AD%98%E5%99%A8/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          14端口
+          11标志寄存器
         
       </div>
     </a>

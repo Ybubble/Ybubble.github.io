@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://example.com">
+  <link rel="dns-prefetch" href="https://Ybubble.github.io">
   <title>11标志寄存器 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="引言 8086CPU的标志寄存器（flag）有16位，其中存储二点信息通常被称为程序状态字（PSW） 其他寄存器是用来存放数据的，都是整个寄存器具有一个含义。而flag寄存器是按位起作用的，也就是说，它的每一位都有专门的含义，记录特定的信息">
 <meta property="og:type" content="article">
 <meta property="og:title" content="11标志寄存器">
-<meta property="og:url" content="http://example.com/2022/02/14/11%E6%A0%87%E5%BF%97%E5%AF%84%E5%AD%98%E5%99%A8/index.html">
+<meta property="og:url" content="https://ybubble.github.io/2022/02/14/11%E6%A0%87%E5%BF%97%E5%AF%84%E5%AD%98%E5%99%A8/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="引言 8086CPU的标志寄存器（flag）有16位，其中存储二点信息通常被称为程序状态字（PSW） 其他寄存器是用来存放数据的，都是整个寄存器具有一个含义。而flag寄存器是按位起作用的，也就是说，它的每一位都有专门的含义，记录特定的信息">
 <meta property="og:locale" content="en_US">
@@ -41,9 +41,9 @@
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
-    <div class="left-col" q-class="show:isShow">
+    <div class="left-col" q-class="show:isShow"  style="background: D:/MINE/blog/themes/yilia/source/assets/bg.jpg no-repeat 100%;background-size:cover;opacity:0.8;filter:alpha(opacity=80);">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: rgba(0,0,0,0.5)"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -63,6 +63,9 @@
 	        
 			</ul>
 		</nav>
+<nav>
+    总文章数 49
+</nav>
 		<nav class="header-smart-menu">
     		
     			
@@ -73,9 +76,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 		        
 			</div>
 		</nav>
@@ -86,7 +87,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: rgba(0,0,0,0.5)"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -110,9 +111,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="github" target="_blank" href="https://github.com/Ybubble" title="github"><i class="icon-github"></i></a>
 			        
 				</div>
 			</nav>
@@ -166,7 +165,7 @@
 
 <h1 id="ZF标志"><a href="#ZF标志" class="headerlink" title="ZF标志"></a>ZF标志</h1><ul>
 <li>ZF：零标志位</li>
-<li>记录相关指令执行后：结果为0，ZF=1；结果不为0，ZF=0</li>
+<li>记录相关指令执行后：结果为0，ZF&#x3D;1；结果不为0，ZF&#x3D;0</li>
 </ul>
 <h1 id="PF标志"><a href="#PF标志" class="headerlink" title="PF标志"></a>PF标志</h1><ul>
 <li><p>flag的第2位</p>
@@ -174,8 +173,8 @@
 <li><p>奇偶标志位</p>
 </li>
 <li><p>记录指令执行后，结果的所有二进制位中1的个数：</p>
-<p>为偶数：PF=1</p>
-<p>为奇数：PF=0</p>
+<p>为偶数：PF&#x3D;1</p>
+<p>为奇数：PF&#x3D;0</p>
 </li>
 </ul>
 <h1 id="SF标志"><a href="#SF标志" class="headerlink" title="SF标志"></a>SF标志</h1><ul>
@@ -184,8 +183,8 @@
 <li><p>符号标志位</p>
 </li>
 <li><p>指令执行后：</p>
-<p>结果为负，SF=1</p>
-<p>结果为正，SF=0</p>
+<p>结果为负，SF&#x3D;1</p>
+<p>结果为正，SF&#x3D;0</p>
 </li>
 <li><p>是CPU对有符号数运算结果的一种记录，它记录数据的正负</p>
 </li>
@@ -210,9 +209,9 @@
 </li>
 <li><p>格式：adc 操作对象1，操作对象2</p>
 </li>
-<li><p>功能：操作对象1=操作对象1+操作对象2+CF</p>
+<li><p>功能：操作对象1&#x3D;操作对象1+操作对象2+CF</p>
 </li>
-<li><p>例：adc ax，bx —&gt;(ax)=(ax)+(bx)+CF</p>
+<li><p>例：adc ax，bx —&gt;(ax)&#x3D;(ax)+(bx)+CF</p>
 </li>
 <li><p>在执行adc指令的时候加上的CF的值的含义由adc指令前面的指令决定，即关键在于所加上的CF值是被什么指令设置的</p>
 <ul>
@@ -237,8 +236,8 @@
 <h1 id="sbb指令"><a href="#sbb指令" class="headerlink" title="sbb指令"></a>sbb指令</h1><ul>
 <li>带借位减法指令，利用CF位上记录的借位值</li>
 <li>格式：sbb 操作对象1，操作对象2</li>
-<li>功能：操作对象1=操作对象1-操作对象2-CF</li>
-<li>例：sbb ax，bx—&gt;(ax)=(ax)-(bx)-CF</li>
+<li>功能：操作对象1&#x3D;操作对象1-操作对象2-CF</li>
+<li>例：sbb ax，bx—&gt;(ax)&#x3D;(ax)-(bx)-CF</li>
 </ul>
 <h1 id="cmp指令"><a href="#cmp指令" class="headerlink" title="cmp指令"></a>cmp指令</h1><ul>
 <li><p>比较指令，功能相当于减法指令，只是不保存结果</p>
@@ -252,25 +251,25 @@
 <li><p>功能：计算“操作对象1-操作对象2”但不保存结果，仅仅根据计算结果对标志寄存器进行设置</p>
 </li>
 <li><p>例：cmp ax，ax—&gt;(ax)-(ax)结果为0，但并不保存在ax中，仅影响flag的相关各位</p>
-<p>执行后：ZF=1,PF=1,SF=0,CF=0,OF=0</p>
+<p>执行后：ZF&#x3D;1,PF&#x3D;1,SF&#x3D;0,CF&#x3D;0,OF&#x3D;0</p>
 </li>
 <li><p>(爆破、破解)</p>
 </li>
 <li><p>比较：cmp ah，bh</p>
 <ul>
-<li><p>SF=1，OF=0</p>
-<p>OF=0，说明没有溢出，逻辑上真正结果的正负=实际结果的正负</p>
-<p>SF=1，实际结果为负，所以逻辑上真正的结果为负，所以（ah）&lt;（bh）</p>
+<li><p>SF&#x3D;1，OF&#x3D;0</p>
+<p>OF&#x3D;0，说明没有溢出，逻辑上真正结果的正负&#x3D;实际结果的正负</p>
+<p>SF&#x3D;1，实际结果为负，所以逻辑上真正的结果为负，所以（ah）&lt;（bh）</p>
 </li>
-<li><p>SF=1，OF=1</p>
-<p>OF=1，说明有溢出，逻辑上真正结果的正负≠实际结果的正负</p>
-<p>如果因为溢出而导致了实际结果为负，那么逻辑上真正的结果必然为正，这样，”SF=1，OF=1“说明了（ah）&gt;（bh）</p>
+<li><p>SF&#x3D;1，OF&#x3D;1</p>
+<p>OF&#x3D;1，说明有溢出，逻辑上真正结果的正负≠实际结果的正负</p>
+<p>如果因为溢出而导致了实际结果为负，那么逻辑上真正的结果必然为正，这样，”SF&#x3D;1，OF&#x3D;1“说明了（ah）&gt;（bh）</p>
 </li>
-<li><p>SF=0，OF=1</p>
+<li><p>SF&#x3D;0，OF&#x3D;1</p>
 <p>（ah）&lt;（bh）</p>
 </li>
-<li><p>SF=0，OF=1</p>
-<p>（ah）&gt;=（bh）</p>
+<li><p>SF&#x3D;0，OF&#x3D;1</p>
+<p>（ah）&gt;&#x3D;（bh）</p>
 </li>
 </ul>
 </li>
@@ -286,54 +285,54 @@
 <tbody><tr>
 <td>je</td>
 <td>等于则转移</td>
-<td>ZF=1</td>
+<td>ZF&#x3D;1</td>
 </tr>
 <tr>
 <td>jne</td>
 <td>不等于则转移</td>
-<td>ZF=0</td>
+<td>ZF&#x3D;0</td>
 </tr>
 <tr>
 <td>jb</td>
 <td>低于则转移</td>
-<td>CF=1</td>
+<td>CF&#x3D;1</td>
 </tr>
 <tr>
 <td>jnb</td>
 <td>不低于则转移</td>
-<td>CF=0</td>
+<td>CF&#x3D;0</td>
 </tr>
 <tr>
 <td>ja</td>
 <td>高于则转移</td>
-<td>CF=0,ZF=0</td>
+<td>CF&#x3D;0,ZF&#x3D;0</td>
 </tr>
 <tr>
 <td>jna</td>
 <td>不高于则转移</td>
-<td>CF=1或ZF=1</td>
+<td>CF&#x3D;1或ZF&#x3D;1</td>
 </tr>
 </tbody></table>
 <p>e：equal、ne：not equal、b：below、a：above</p>
 <ul>
 <li><p>都是cmp指令进行无符号数比较时，记录比较结果的标记位</p>
-<p>比如je，检测ZF位，当ZF=1时进行转移，如果je前面使用了cmp指令，那么je对ZF的检测，实际上就是间接地检测cmp的比较结果是否为两数相等</p>
+<p>比如je，检测ZF位，当ZF&#x3D;1时进行转移，如果je前面使用了cmp指令，那么je对ZF的检测，实际上就是间接地检测cmp的比较结果是否为两数相等</p>
 </li>
-<li><p>编程实现：如果（ah）=（bh），则（ah）=（ah）+（ah），否则（ah）=（ah）+（bh）</p>
+<li><p>编程实现：如果（ah）&#x3D;（bh），则（ah）&#x3D;（ah）+（ah），否则（ah）&#x3D;（ah）+（bh）</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cmp ah,bh</span><br><span class="line">je s</span><br><span class="line">add ah,bh</span><br><span class="line">jmp short ok</span><br><span class="line"></span><br><span class="line">s:add ah,ah</span><br><span class="line">ok:ret</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>虽然je的逻辑含义是”相等则转移“，但它进行的操作是ZF=1时转移</li>
-<li>”相等则转移“这种逻辑含义，是通过cmp指令配合使用来体现的，因为cmp指令为”ZF=1“赋予了”两数相等“的含义</li>
-<li>je检测的是ZF位置，兵部观je前面是什么指令，只要CPU执行je指令时，ZF=1，那么就会发生转移</li>
+<li>虽然je的逻辑含义是”相等则转移“，但它进行的操作是ZF&#x3D;1时转移</li>
+<li>”相等则转移“这种逻辑含义，是通过cmp指令配合使用来体现的，因为cmp指令为”ZF&#x3D;1“赋予了”两数相等“的含义</li>
+<li>je检测的是ZF位置，兵部观je前面是什么指令，只要CPU执行je指令时，ZF&#x3D;1，那么就会发生转移</li>
 </ul>
 </li>
 </ul>
 <h1 id="DF标志"><a href="#DF标志" class="headerlink" title="DF标志"></a>DF标志</h1><ul>
 <li>flag的第10位是DF，方向标志位</li>
 <li>在串处理指令中，控制每次操作后si、di的增减<ul>
-<li>DF=0：每次操作后，si、di递增</li>
-<li>DF=1：每次操作后，si、di递减</li>
+<li>DF&#x3D;0：每次操作后，si、di递增</li>
+<li>DF&#x3D;1：每次操作后，si、di递减</li>
 </ul>
 </li>
 </ul>
@@ -342,10 +341,10 @@
 <ul>
 <li><p>功能：（以字节为单位传送）</p>
 <ul>
-<li><p>（（es） * 16+（di））=（（ds） * 16+（（si））</p>
+<li><p>（（es） * 16+（di））&#x3D;（（ds） * 16+（（si））</p>
 </li>
-<li><p>如果DF=0，则：（si）=（si）+1、（di）=（di）+1</p>
-<p>如果DF=1，ze：（si）=（si）-1，（di）=（di）-1 </p>
+<li><p>如果DF&#x3D;0，则：（si）&#x3D;（si）+1、（di）&#x3D;（di）+1</p>
+<p>如果DF&#x3D;1，ze：（si）&#x3D;（si）-1，（di）&#x3D;（di）-1</p>
 </li>
 </ul>
 </li>
@@ -487,7 +486,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/02/14/11%E6%A0%87%E5%BF%97%E5%AF%84%E5%AD%98%E5%99%A8/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ybubble.github.io/2022/02/14/11%E6%A0%87%E5%BF%97%E5%AF%84%E5%AD%98%E5%99%A8/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -501,18 +500,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/02/14/12%E5%86%85%E4%B8%AD%E6%96%AD/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/02/14/14%E7%AB%AF%E5%8F%A3/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          12内中断
+          14端口
         
       </div>
     </a>
   
   
-    <a href="/2022/02/14/14%E7%AB%AF%E5%8F%A3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">14端口</div>
+    <a href="/2022/02/13/10call%E5%92%8Cret%E6%8C%87%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">10call和ret指令</div>
       <i class="icon-circle-right"></i>
     </a>
   
